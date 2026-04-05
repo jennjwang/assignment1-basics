@@ -1,5 +1,5 @@
 from cProfile import Profile
-from collections import defaultdict
+from collections import Counter, defaultdict
 import json
 import mmap
 import numpy as np
@@ -16,7 +16,8 @@ def _split_and_pretokenize(args):
     text = chunk_bytes.decode("utf-8", errors="ignore")
     pattern = "|".join(re.escape(tok) for tok in special_tokens)
     parts = [part for part in re.split(pattern, text) if part]
-    return [tok for part in parts for tok in re.findall(PAT, part)]
+    pretokens = [tok for part in parts for tok in re.findall(PAT, part)]
+    return Counter(pretokens)
 
 class BPETokenizer:
 
@@ -35,177 +36,129 @@ class BPETokenizer:
         for tok in self.special_tokens:
             self.vocab[len(self.vocab)] = tok.encode("utf-8")
 
-    def _pretokenize_chunks(self):
-
+    def _pretokenize_chunks(self) -> Counter:
         with open(self.input_path, "rb") as f:
             num_processes = cpu_count()
             mm = mmap.mmap(f.fileno(), 0, access=mmap.ACCESS_READ)
             boundaries = find_chunk_boundaries(mm, num_processes, b"<|endoftext|>")
             tasks = [bytes(mm[start:end]) for start, end in zip(boundaries[:-1], boundaries[1:])]
 
-        # split on special tokens
         with Pool(num_processes) as p:
-            results = p.map(_split_and_pretokenize, [(chunk, self.special_tokens) for chunk in tasks])
+            results = list(tqdm(
+                p.imap(_split_and_pretokenize, [(chunk, self.special_tokens) for chunk in tasks]),
+                total=len(tasks), desc="Pretokenizing"
+            ))
 
-        return results
+        merged = Counter()
+        for chunk_counts in results:
+            merged.update(chunk_counts)
+        return merged
 
-    def _merge(self, flat_tokens, pair, merged_id, freq, indices,
-               flat_is_deleted, flat_prv, flat_nxt, N):
+    def _merge(self, tokens, pair, merged_id, pair_freq, indices, is_merged, prv, nxt, counts):
+        N = len(tokens)
+        for i in list(indices[pair]):
+            j = nxt[i] # the position of the right token in the pair
+            # skip if either position already deleted
+            if i < 0 or j >= N or is_merged[i] or is_merged[j]:
+                continue
 
-        pos_arr = np.array(indices[pair], dtype=np.int64)
+            # locate neighbors via prev/next arrays
+            prev_i = prv[i]
+            next_j = nxt[j]
+            token_count = counts[i]
+            prev = tokens[prev_i] if prev_i >= 0 else None
+            next = tokens[next_j] if next_j < N else None
 
-        if len(pos_arr) > 0:
-            j_arr = flat_nxt[pos_arr]
+            # update tokens with new merged id
+            tokens[i] = merged_id
+            is_merged[j] = True
+            nxt[i] = next_j # skips over the merged id
+            if next_j < N:
+                prv[next_j] = i# update doubly linked list
 
-            # filter: not deleted, within bounds, tokens still match (lazy deletion check)
-            valid = (~flat_is_deleted[pos_arr] &
-                     (j_arr < N) &
-                     (flat_tokens[pos_arr] == pair[0]) &
-                     (flat_tokens[j_arr] == pair[1]))
+            # update the frequency and indices of previous pairs
+            if prev is not None:
+                    prev_pair = (prev, pair[0])
+                    new_prev = (prev, merged_id)
+                    pair_freq[new_prev] += token_count
+                    pair_freq[prev_pair] -= token_count
+                    indices[new_prev].add(prev_i)
+                    indices[prev_pair].discard(prev_i)
+            
+            # update the frequency and indices of next pairs
+            if next is not None:
+                next_pair = (pair[1], next)
+                new_next = (merged_id, next)
+                pair_freq[new_next] += token_count
+                pair_freq[next_pair] -= token_count
+                indices[new_next].add(i)
+                indices[next_pair].discard(j)
 
-            i_pos = pos_arr[valid]
-            j_pos = j_arr[valid]
-
-            if len(i_pos) > 1:
-                # resolve adjacency conflicts: sort, then greedily skip i[k] == j[k-1]
-                sort_idx = np.argsort(i_pos)
-                i_pos = i_pos[sort_idx]
-                j_pos = j_pos[sort_idx]
-                if (i_pos[1:] == j_pos[:-1]).any():
-                    keep = np.ones(len(i_pos), dtype=bool)
-                    for k in range(1, len(i_pos)):
-                        if i_pos[k] == j_pos[k - 1] and keep[k - 1]:
-                            keep[k] = False
-                    i_pos = i_pos[keep]
-                    j_pos = j_pos[keep]
-
-            if len(i_pos) > 0:
-                prev_pos = flat_prv[i_pos]
-                next_pos = flat_nxt[j_pos]
-
-                has_prev = prev_pos >= 0
-                has_next = next_pos < N
-
-                safe_prev = np.where(has_prev, prev_pos, 0)
-                safe_next = np.where(has_next, next_pos, 0)
-                prev_tokens = np.where(has_prev, flat_tokens[safe_prev], -1)
-                next_tokens = np.where(has_next, flat_tokens[safe_next], -1)
-
-                # batch update tokens, deleted, nxt, prv
-                flat_tokens[i_pos] = merged_id
-                flat_is_deleted[j_pos] = True
-                flat_nxt[i_pos] = next_pos
-                if has_next.any():
-                    flat_prv[next_pos[has_next]] = i_pos[has_next]
-
-                # batch freq + indices update for left neighbors
-                if has_prev.any():
-                    p_tok = prev_tokens[has_prev]
-                    p_pos = prev_pos[has_prev]
-                    unique_pt, inv = np.unique(p_tok, return_inverse=True)
-                    for k, pt in enumerate(unique_pt):
-                        pt = int(pt)
-                        cnt = int((inv == k).sum())
-                        freq[(pt, pair[0])] -= cnt
-                        new_p = (pt, merged_id)
-                        freq[new_p] += cnt
-                        indices[new_p].extend(p_pos[inv == k].tolist())
-
-                # batch freq + indices update for right neighbors
-                if has_next.any():
-                    n_tok = next_tokens[has_next]
-                    i_next = i_pos[has_next]
-                    unique_nt, inv = np.unique(n_tok, return_inverse=True)
-                    for k, nt in enumerate(unique_nt):
-                        nt = int(nt)
-                        cnt = int((inv == k).sum())
-                        freq[(pair[1], nt)] -= cnt
-                        new_n = (merged_id, nt)
-                        freq[new_n] += cnt
-                        indices[new_n].extend(i_next[inv == k].tolist())
-
-        del freq[pair]
+        # remove old
+        del pair_freq[pair]
         del indices[pair]
 
 
     def train(self):
-
-        # integer ID lookup: initially 0-255 for single bytes + special tokens
+        # integer ID lookup
         id_to_bytes = dict(self.vocab)
         next_id = len(id_to_bytes)
 
-        # pretokenize into integer ID sequences
-        raw_tokens = []
-        for chunk in self._pretokenize_chunks():
-            for pretoken in chunk:
-                raw_tokens.append(list(pretoken.encode("utf-8")))
+        # get tokens and counts (need to flatten)
+        pretoken_counts = self._pretokenize_chunks()
+        raw_str = list(pretoken_counts.keys()) 
+        raw_counts = list(pretoken_counts.values()) # count corresponding to token at i
+        raw_tokens = [list(s.encode("utf-8")) for s in raw_str] # byte sequence corresponding to token at i
 
-        if not raw_tokens:
-            return
-
-        # build flat numpy arrays (N+1 so sentinel index N is safe)
-        lengths = [len(s) for s in raw_tokens]
-        offsets = np.zeros(len(raw_tokens) + 1, dtype=np.int64)
+        # offsets to track start and end of the tokens
+        lengths = np.array([len(seq) for seq in raw_tokens])
+        offsets = np.zeros(len(raw_tokens) + 1, dtype=np.int64) # the actual position of the token in the sequence
         offsets[1:] = np.cumsum(lengths)
-        N = int(offsets[-1])
+        N = offsets[-1]
 
-        flat_tokens = np.empty(N + 1, dtype=np.int32)
-        flat_tokens[N] = -1  # sentinel
-        flat_prv = np.empty(N, dtype=np.int64)
-        flat_nxt = np.empty(N, dtype=np.int64)
+        # build prev/next arrays for neighbor lookup
+        tokens = np.empty(N, dtype=np.int32) # flatten tokens
+        prv = np.empty(N, dtype=np.int64) # holds the index to the previous token for token at i
+        nxt = np.empty(N, dtype=np.int64) # holds the index to the next token for token at i
+        counts = np.empty(N, dtype=np.int64)
+        is_merged = np.zeros(N, dtype=bool)
 
-        for ci, seq in enumerate(raw_tokens):
-            s, e = int(offsets[ci]), int(offsets[ci + 1])
-            flat_tokens[s:e] = seq
-            flat_prv[s:e] = np.arange(s - 1, e - 1)
-            flat_nxt[s:e] = np.arange(s + 1, e + 1)
-            flat_prv[s] = -1   # no prev at sequence start
-            flat_nxt[e - 1] = N  # sentinel: no next at sequence end
+        for i, (seq, count) in enumerate(zip(raw_tokens, raw_counts)):
+            start, end = offsets[i], offsets[i+1]
+            tokens[start: end] = raw_tokens[i]
+            prv[start:end] = np.arange(start-1, end-1)
+            nxt[start:end] = np.arange(start+1, end+1)
+            prv[start] = -1
+            nxt[end - 1] = N
+            counts[start: end] = count
 
-        flat_is_deleted = np.zeros(N, dtype=bool)
+        # build freq and indices for each pair
+        pair_freq = defaultdict(int)
+        pair_indices = defaultdict(set)
+        for pos in range(N):
+            if nxt[pos] < N:
+                pair = (tokens[pos], tokens[nxt[pos]])
+                pair_freq[pair] += counts[pos]
+                pair_indices[pair].add(pos)
 
-        # build freq and indices using numpy grouping
-        all_pos = np.arange(N, dtype=np.int64)
-        valid_pos = all_pos[flat_nxt[all_pos] < N]
-        left_toks = flat_tokens[valid_pos].astype(np.int64)
-        right_toks = flat_tokens[flat_nxt[valid_pos]].astype(np.int64)
-
-        # encode each pair as a single int for fast grouping
-        enc_factor = np.int64(next_id + 1)
-        pair_enc = left_toks * enc_factor + right_toks
-        sort_idx = np.argsort(pair_enc, kind='stable')
-        sorted_enc = pair_enc[sort_idx]
-        sorted_pos = valid_pos[sort_idx]
-        sorted_left = left_toks[sort_idx]
-        sorted_right = right_toks[sort_idx]
-
-        bounds = np.concatenate([[0], np.where(np.diff(sorted_enc) != 0)[0] + 1, [len(sorted_enc)]])
-
-        freq = defaultdict(int)
-        indices = defaultdict(list)
-        for k in range(len(bounds) - 1):
-            gs, ge = int(bounds[k]), int(bounds[k + 1])
-            a, b = int(sorted_left[gs]), int(sorted_right[gs])
-            freq[(a, b)] = ge - gs
-            indices[(a, b)] = sorted_pos[gs:ge].tolist()
-
-        # merge loop
-        merge_pairs = []
+        # merge most frequent pairs
+        merged_pairs = []
         num_merges = self.vocab_size - len(self.vocab)
         with tqdm(total=num_merges, desc="BPE merges") as pbar:
-            while len(merge_pairs) < num_merges:
-                pair = max(freq.items(), key=lambda item: (item[1],
-                           id_to_bytes[item[0][0]], id_to_bytes[item[0][1]]))[0]
+            while len(merged_pairs) < num_merges:
+                pair = max(pair_freq.items(), key=lambda item: (item[1],
+                           id_to_bytes[item[0][0]], id_to_bytes[item[0][1]]))[0] # lexicographically greater
+            
                 merged_id = next_id
                 next_id += 1
                 id_to_bytes[merged_id] = id_to_bytes[pair[0]] + id_to_bytes[pair[1]]
-                self._merge(flat_tokens, pair, merged_id, freq, indices,
-                            flat_is_deleted, flat_prv, flat_nxt, N)
-                merge_pairs.append(pair)
+                self._merge(tokens, pair, merged_id, pair_freq, pair_indices, is_merged, prv, nxt, counts)
+                merged_pairs.append(pair)
                 pbar.update(1)
 
+        # build vocab and merges from integer IDs
         self.vocab = id_to_bytes
-        self.merges = [(id_to_bytes[a], id_to_bytes[b]) for a, b in merge_pairs]
+        self.merges = [(id_to_bytes[a], id_to_bytes[b]) for a, b in merged_pairs]
 
 def save(bpe, vocab_path="vocab.json", merges_path="merges.txt"):
     # vocab: {token_id: string with escaped non-utf8 bytes}
@@ -221,7 +174,7 @@ if __name__ == "__main__":
 
     with Profile() as profile:
         special_tokens = ['<|endoftext|>']
-        input_path = 'data/TinyStoriesV2-GPT4-train.txt'
+        input_path = 'data/TinyStoriesV2-GPT4-valid.txt'
         vocab_size = 10000
 
         bpe = BPETokenizer(input_path=input_path, vocab_size=vocab_size, special_tokens=special_tokens)
