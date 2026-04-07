@@ -27,21 +27,56 @@ class BPETokenizer:
                  special_tokens = None,
                  vocab = None,
                  merges = None):
-
-        self.vocab = {i: bytes([i]) for i in range(256)}
+     
+        self.vocab = vocab
         self.vocab_size = vocab_size
         self.input_path = input_path
-        self.merges = []
+        self.merges = merges or []
         self.special_tokens = special_tokens or []
-        for tok in self.special_tokens:
-            self.vocab[len(self.vocab)] = tok.encode("utf-8")
+        if vocab is None:
+            self.vocab = {i: bytes([i]) for i in range(256)}
+            for tok in self.special_tokens:
+                self.vocab[len(self.vocab)] = tok.encode("utf-8")
 
+    @classmethod
     def from_files(cls, vocab_filepath, merges_filepath, special_tokens=None):
         with open(vocab_filepath, "r") as f:
             vocab = json.load(f)
         with open(merges_filepath, "r") as f:
             merges = f.readlines()
         return cls(vocab=vocab, merges=merges, special_tokens=special_tokens)
+
+    def encode(self, text):
+        bytes_to_id = {v: k for k, v in self.vocab.items()}
+        res = []
+        sorted_toks = sorted(self.special_tokens, key=len, reverse=True)
+        pattern = "(" + "|".join(re.escape(tok) for tok in sorted_toks) + ")"
+        parts = re.split(pattern, text)  if self.special_tokens else [text]
+        for part in parts:
+            if part in self.special_tokens:
+                res.append(bytes_to_id[part.encode('utf-8')])
+                continue
+            for pretoken in re.findall(PAT, part):
+                token_ids = [bytes_to_id[bytes([b])] for b in pretoken.encode('utf-8')]
+                for pair in self.merges:
+                    merged_id = bytes_to_id[pair[0] + pair[1]]
+                    i = 0
+                    while i < len(token_ids) - 1:
+                        if (self.vocab[token_ids[i]], self.vocab[token_ids[i+1]]) == pair:
+                            token_ids[i:i+2] = [merged_id]
+                        else:
+                            i += 1
+                res.extend(token_ids)
+        return res
+
+    def encode_iterable(self, iterable):
+        for text in iterable:
+            yield from self.encode(text)
+    
+    def decode(self, ids):
+        token_bytes = [self.vocab[i] for i in ids]
+        text = b"".join(token_bytes).decode("utf-8", errors="replace")
+        return text
     
     def _pretokenize_chunks(self) -> Counter:
         with open(self.input_path, "rb") as f:
