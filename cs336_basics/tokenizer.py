@@ -36,6 +36,13 @@ class BPETokenizer:
         for tok in self.special_tokens:
             self.vocab[len(self.vocab)] = tok.encode("utf-8")
 
+    def from_files(cls, vocab_filepath, merges_filepath, special_tokens=None):
+        with open(vocab_filepath, "r") as f:
+            vocab = json.load(f)
+        with open(merges_filepath, "r") as f:
+            merges = f.readlines()
+        return cls(vocab=vocab, merges=merges, special_tokens=special_tokens)
+    
     def _pretokenize_chunks(self) -> Counter:
         with open(self.input_path, "rb") as f:
             num_processes = cpu_count()
