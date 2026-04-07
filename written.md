@@ -7,6 +7,7 @@ c. when this character is printed, it is treated as a null character. It's invis
 a. 
 
 2.5
-a. 
-b.
-c.
+a. It took 38 seconds and 304.4 MB in memory. The longest token in the vocabulary is a tie among ' accomplishment', ' disappointment', and ' responsibility'. [TODO: do these words make sense?]
+b. The part that took the longest was pretokenization (19s)
+a. It took 182 seconds and 1073 MB in memory. The longest token in the vocabulary is '-------------------------'
+b. The OWT tokenizer has a much larger vocab. TinyStories' tokenizer tends to skew toward children's vocabulary (e.g., "ladybug", "pancakes"), while OWT has unique tokens that reflect real-world content (e.g., "violent", "war", "Filipino"). The longest tokens in OWT are repeated character like '-------------------------' which are most likely some formatting separators. TinyStories' longest tokens are instead common English words like "responsibility."

@@ -1,11 +1,13 @@
 from cProfile import Profile
 from collections import Counter, defaultdict
+import heapq
 import json
 import mmap
 import numpy as np
 import regex as re
 import time
 from tqdm import tqdm
+import tracemalloc
 
 from cs336_basics.pretokenization_example import find_chunk_boundaries
 from multiprocessing import Pool, cpu_count
@@ -13,10 +15,15 @@ from multiprocessing import Pool, cpu_count
 PAT = r"""'(?:[sdmt]|ll|ve|re)| ?\p{L}+| ?\p{N}+| ?[^\s\p{L}\p{N}]+|\s+(?!\S)|\s+"""
 
 def _split_and_pretokenize(args):
-    chunk_bytes, special_tokens = args
-    text = chunk_bytes.decode("utf-8", errors="ignore")
-    pattern = "|".join(re.escape(tok) for tok in special_tokens)
-    parts = [part for part in re.split(pattern, text) if part]
+    file_path, start, end, special_tokens = args
+    with open(file_path, "rb") as f:
+        f.seek(start)
+        text = f.read(end - start).decode("utf-8", errors="ignore")
+    if special_tokens:
+        pattern = "|".join(re.escape(tok) for tok in special_tokens)
+        parts = [part for part in re.split(pattern, text) if part]
+    else:
+        parts = [text]
     return Counter(tok for part in parts for tok in re.findall(PAT, part))
 
 class BPETokenizer:
@@ -38,15 +45,19 @@ class BPETokenizer:
 
     def _pretokenize_chunks(self) -> dict[str, int]:
         """Returns a dict mapping each unique pretoken to its total frequency."""
+        num_processes = cpu_count()
+        num_chunks = num_processes * 4
         with open(self.input_path, "rb") as f:
-            num_processes = cpu_count()
             mm = mmap.mmap(f.fileno(), 0, access=mmap.ACCESS_READ)
-            boundaries = find_chunk_boundaries(mm, num_processes, b"<|endoftext|>")
-            tasks = [bytes(mm[start:end]) for start, end in zip(boundaries[:-1], boundaries[1:])]
+            boundaries = find_chunk_boundaries(mm, num_chunks, b"<|endoftext|>")
+            mm.close()
+
+        tasks = [(self.input_path, start, end, self.special_tokens)
+                 for start, end in zip(boundaries[:-1], boundaries[1:])]
 
         with Pool(num_processes) as p:
             results = list(tqdm(
-                p.imap(_split_and_pretokenize, [(chunk, self.special_tokens) for chunk in tasks]),
+                p.imap_unordered(_split_and_pretokenize, tasks),
                 total=len(tasks), desc="Pretokenizing"
             ))
 
@@ -56,7 +67,8 @@ class BPETokenizer:
         return merged
 
     def _merge(self, flat_tokens, pair, merged_id, freq, indices,
-               flat_is_deleted, flat_prv, flat_nxt, N, flat_weight):
+               flat_is_deleted, flat_prv, flat_nxt, N, flat_weight,
+               heap, _hc):
 
         pos_arr = np.array(indices[pair], dtype=np.int64)
 
@@ -113,9 +125,19 @@ class BPETokenizer:
                         pt = int(pt)
                         mask = inv == k
                         cnt = int(flat_weight[p_pos[mask]].sum())
-                        freq[(pt, pair[0])] -= cnt
+                        old_p = (pt, pair[0])
+                        freq[old_p] -= cnt
+                        if freq[old_p] <= 0:
+                            del freq[old_p]
+                            if old_p in indices:
+                                del indices[old_p]
+                        else:
+                            _hc[0] += 1
+                            heapq.heappush(heap, (-freq[old_p], _hc[0], old_p))
                         new_p = (pt, merged_id)
                         freq[new_p] += cnt
+                        _hc[0] += 1
+                        heapq.heappush(heap, (-freq[new_p], _hc[0], new_p))
                         indices[new_p].extend(p_pos[mask].tolist())
 
                 # batch freq + indices update for right neighbors
@@ -127,9 +149,19 @@ class BPETokenizer:
                         nt = int(nt)
                         mask = inv == k
                         cnt = int(flat_weight[i_next[mask]].sum())
-                        freq[(pair[1], nt)] -= cnt
+                        old_n = (pair[1], nt)
+                        freq[old_n] -= cnt
+                        if freq[old_n] <= 0:
+                            del freq[old_n]
+                            if old_n in indices:
+                                del indices[old_n]
+                        else:
+                            _hc[0] += 1
+                            heapq.heappush(heap, (-freq[old_n], _hc[0], old_n))
                         new_n = (merged_id, nt)
                         freq[new_n] += cnt
+                        _hc[0] += 1
+                        heapq.heappush(heap, (-freq[new_n], _hc[0], new_n))
                         indices[new_n].extend(i_next[mask].tolist())
 
         del freq[pair]
@@ -202,18 +234,31 @@ class BPETokenizer:
             freq[(a, b)] = int(flat_weight[sorted_pos[gs:ge]].sum())
             indices[(a, b)] = sorted_pos[gs:ge].tolist()
 
+        # build max-heap with lazy deletion; entries: (-freq, counter, pair)
+        _hc = [0]
+        heap = []
+        for pair_key, f in freq.items():
+            if f > 0:
+                _hc[0] += 1
+                heapq.heappush(heap, (-f, _hc[0], pair_key))
+
         # merge loop
         merge_pairs = []
         num_merges = self.vocab_size - len(self.vocab)
         with tqdm(total=num_merges, desc="BPE merges") as pbar:
             while len(merge_pairs) < num_merges:
-                pair = max(freq.items(), key=lambda item: (item[1],
-                           id_to_bytes[item[0][0]], id_to_bytes[item[0][1]]))[0]
+                while heap:
+                    neg_f, _, pair = heapq.heappop(heap)
+                    if pair in freq and freq[pair] == -neg_f:
+                        break
+                else:
+                    break
                 merged_id = next_id
                 next_id += 1
                 id_to_bytes[merged_id] = id_to_bytes[pair[0]] + id_to_bytes[pair[1]]
                 self._merge(flat_tokens, pair, merged_id, freq, indices,
-                            flat_is_deleted, flat_prv, flat_nxt, N, flat_weight)
+                            flat_is_deleted, flat_prv, flat_nxt, N, flat_weight,
+                            heap, _hc)
                 merge_pairs.append(pair)
                 pbar.update(1)
 
@@ -232,10 +277,14 @@ def save(bpe, vocab_path="vocab.json", merges_path="merges.txt"):
 
 if __name__ == "__main__":
 
+    tracemalloc.start()
     with Profile() as profile:
         special_tokens = ['<|endoftext|>']
-        input_path = 'data/TinyStoriesV2-GPT4-valid.txt'
-        vocab_size = 10000
+        # input_path = 'data/TinyStoriesV2-GPT4-train.txt'
+        # vocab_size = 10000
+
+        input_path = 'data/owt_valid.txt'
+        vocab_size = 32000
 
         bpe = BPETokenizer(input_path=input_path, vocab_size=vocab_size, special_tokens=special_tokens)
         bpe.train()
@@ -244,4 +293,20 @@ if __name__ == "__main__":
 
     stats = pstats.Stats(profile)
     stats.strip_dirs().sort_stats("cumulative").print_stats(20)
-    stats.dump_stats("data/profile.out")
+    stats.dump_stats("data/profile.out")    
+    current, peak = tracemalloc.get_traced_memory()
+    tracemalloc.stop()
+    print(f"tracemalloc current: {current / 1e6:.1f} MB, peak: {peak / 1e6:.1f} MB")
+    
+    vocab_path = "data/vocab.json"
+    merges_path = "data/merges.txt"
+
+    with open(vocab_path, "r") as f:
+        vocab = json.load(f)
+        longest = max(vocab.items(), key=lambda kv: len(kv[1]))
+        # or all ties:
+        max_len = max(len(v) for v in vocab.values())
+        longest_all = [(k, v) for k, v in vocab.items() if len(v) == max_len]
+        print(longest)
+        print(max_len)
+        print(longest_all)

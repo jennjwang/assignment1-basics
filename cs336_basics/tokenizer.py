@@ -174,8 +174,8 @@ if __name__ == "__main__":
 
     with Profile() as profile:
         special_tokens = ['<|endoftext|>']
-        input_path = 'data/TinyStoriesV2-GPT4-valid.txt'
-        vocab_size = 10000
+        input_path = 'data/owt_valid.txt'
+        vocab_size = 32000
 
         bpe = BPETokenizer(input_path=input_path, vocab_size=vocab_size, special_tokens=special_tokens)
         bpe.train()
