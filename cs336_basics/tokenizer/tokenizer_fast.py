@@ -9,7 +9,7 @@ import time
 from tqdm import tqdm
 import tracemalloc
 
-from cs336_basics.pretokenization_example import find_chunk_boundaries
+from cs336_basics.tokenizer.pretokenization_example import find_chunk_boundaries
 from multiprocessing import Pool, cpu_count
 
 PAT = r"""'(?:[sdmt]|ll|ve|re)| ?\p{L}+| ?\p{N}+| ?[^\s\p{L}\p{N}]+|\s+(?!\S)|\s+"""
