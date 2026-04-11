@@ -19,7 +19,7 @@
   "weight_decay": 0.1,
   "betas": [0.9, 0.95],
   "eps": 1e-8,
-  "train_path": "data/tiny_stories_train.txt",
-  "val_path": "data/tiny_stories_val.txt",
+  "train_path": "data/raw_data/TinyStoriesV2-GPT4-train.txt",
+  "val_path": "data/raw_data/TinyStoriesV2-GPT4-valid.txt",
   "checkpoint_path": "checkpoints/checkpoint.pt"
 }
