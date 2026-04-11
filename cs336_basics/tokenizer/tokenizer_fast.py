@@ -35,13 +35,77 @@ class BPETokenizer:
                  vocab = None,
                  merges = None):
 
-        self.vocab = {i: bytes([i]) for i in range(256)}
+        self.vocab = vocab
         self.vocab_size = vocab_size
         self.input_path = input_path
-        self.merges = []
+        self.merges = merges or []
         self.special_tokens = special_tokens or []
-        for tok in self.special_tokens:
-            self.vocab[len(self.vocab)] = tok.encode("utf-8")
+        if vocab is None:
+            self.vocab = {i: bytes([i]) for i in range(256)}
+            for tok in self.special_tokens:
+                self.vocab[len(self.vocab)] = tok.encode("utf-8")
+        self._bytes_to_id = {v: k for k, v in self.vocab.items()}
+        self._merge_priority = {}
+        for i, (a, b) in enumerate(self.merges):
+            pair = (self._bytes_to_id[a], self._bytes_to_id[b])
+            if pair not in self._merge_priority:
+                self._merge_priority[pair] = i
+
+    @classmethod
+    def from_files(cls, vocab_filepath, merges_filepath, special_tokens=None):
+        with open(vocab_filepath, "r") as f:
+            vocab = json.load(f)
+            vocab = {int(k): v.encode("latin-1") for k, v in vocab.items()}
+        with open(merges_filepath, "r") as f:
+            merges = f.readlines()
+            final_merges = []
+            for line in merges:
+                line = line.strip('\n')
+                if line.strip():
+                    if line[0] == ' ':
+                        rest = line[1:]
+                        parts = rest.split(' ', 1)
+                        a, b = ' ' + parts[0], parts[1] if len(parts) > 1 else '\n'
+                    else:
+                        a, b = line.split(' ', 1)
+                    final_merges.append((a.encode('latin-1'), b.encode('latin-1')))
+        return cls(vocab=vocab, merges=final_merges, special_tokens=special_tokens)
+
+    def encode(self, text):
+        bytes_to_id = self._bytes_to_id
+        merge_priority = self._merge_priority
+        res = []
+        sorted_toks = sorted(self.special_tokens, key=len, reverse=True)
+        pattern = "(" + "|".join(re.escape(tok) for tok in sorted_toks) + ")"
+        parts = re.split(pattern, text) if self.special_tokens else [text]
+        for part in parts:
+            if part in self.special_tokens:
+                res.append(bytes_to_id[part.encode('utf-8')])
+                continue
+            for pretoken in re.findall(PAT, part):
+                token_ids = [bytes_to_id[bytes([b])] for b in pretoken.encode('utf-8')]
+                while len(token_ids) > 1:
+                    best_idx = None
+                    best_rank = float('inf')
+                    for i in range(len(token_ids) - 1):
+                        rank = merge_priority.get((token_ids[i], token_ids[i+1]))
+                        if rank is not None and rank < best_rank:
+                            best_rank = rank
+                            best_idx = i
+                    if best_idx is None:
+                        break
+                    pair = (token_ids[best_idx], token_ids[best_idx+1])
+                    merged_id = bytes_to_id[self.vocab[pair[0]] + self.vocab[pair[1]]]
+                    token_ids[best_idx:best_idx+2] = [merged_id]
+                res.extend(token_ids)
+        return res
+
+    def encode_iterable(self, iterable):
+        for text in iterable:
+            yield from self.encode(text)
+
+    def decode(self, ids):
+        return b"".join(self.vocab[i] for i in ids).decode("utf-8", errors="replace")
 
     def _pretokenize_chunks(self) -> dict[str, int]:
         """Returns a dict mapping each unique pretoken to its total frequency."""
@@ -268,27 +332,26 @@ class BPETokenizer:
 def save(bpe, vocab_path="vocab.json", merges_path="merges.txt"):
     # vocab: {token_id: string with escaped non-utf8 bytes}
     with open(vocab_path, "w", encoding="utf-8") as f:
-        json.dump({k: v.decode("utf-8", errors="replace") for k, v in bpe.vocab.items()}, f, indent=2, ensure_ascii=False)
+        json.dump({k: v.decode("latin-1") for k, v in bpe.vocab.items()}, f, indent=2, ensure_ascii=False)
 
     # merges: one pair per line as readable strings
     with open(merges_path, "w", encoding="utf-8") as f:
         for a, b in bpe.merges:
-            f.write(f"{a.decode('utf-8', errors='replace')} {b.decode('utf-8', errors='replace')}\n")
+            f.write(f"{a.decode('latin-1')} {b.decode('latin-1')}\n")
 
 if __name__ == "__main__":
 
     tracemalloc.start()
     with Profile() as profile:
         special_tokens = ['<|endoftext|>']
-        # input_path = 'data/TinyStoriesV2-GPT4-train.txt'
+        # input_path = 'data/raw_data/TinyStoriesV2-GPT4-train.txt'
         # vocab_size = 10000
-
-        input_path = 'data/owt_valid.txt'
+        input_path = 'data/raw_data/owt_valid.txt'
         vocab_size = 32000
 
         bpe = BPETokenizer(input_path=input_path, vocab_size=vocab_size, special_tokens=special_tokens)
         bpe.train()
-        save(bpe, vocab_path="data/vocab.json", merges_path="data/merges.txt")
+        save(bpe, vocab_path="data/owt_vocab.json", merges_path="data/owt_merges.txt")
         import pstats
 
     stats = pstats.Stats(profile)

@@ -438,7 +438,7 @@ au se
  ex c
 ur p
 way s
-� �
+â 
  out side
  laug hed
  loo k
@@ -838,11 +838,11 @@ ir ed
 ill y
  he ar
  u se
-� �
+â 
 H i
  p a
  ke pt
-� �
+â 
 Th at
  squ irrel
 e ar
@@ -943,7 +943,7 @@ j oy
  sw e
 i ous
  sa nd
-  “
+  â
 a c
 or n
  r ace
@@ -1061,7 +1061,7 @@ ar ing
  laug h
  d el
  pie ce
-� �
+â 
 er ed
  M r
  ro ll
@@ -1577,9 +1577,9 @@ is es
  hig her
  s itting
  tre asure
-. ”
+. â
  sm o
-! ”
+! â
 g g
  danger ous
  lon ely
@@ -2041,7 +2041,7 @@ e ver
 pec t
 irp y
 bo x
-? ”
+? â
  was h
  l ay
  p our
@@ -3566,7 +3566,7 @@ gl asses
  cost ume
  d ess
  z ipp
-, ”
+, â
  re pe
  muff in
  ar g
@@ -4357,7 +4357,7 @@ Gra ndma
  ho l
 ic er
  hol iday
-  �
+  â
  bark s
 as on
  throw ing
@@ -4834,7 +4834,7 @@ u esday
  app reci
  S ophie
  Joe y
- � �
+ â 
  eag erly
  sail ing
  Co co
@@ -5828,7 +5828,7 @@ F r
  comple ted
  W isdom
  Le ave
-” .
+â .
  knight s
  flag s
  J e
@@ -6783,7 +6783,7 @@ us ing
  refle ction
  hus band
 T ake
-� �
+â 
 ri ver
  cl ues
 u ppy
@@ -6807,7 +6807,7 @@ K ate
  a ff
  hedge hog
  borrow ed
- � �
+ â 
  Ro llie
  snow fl
  country side
@@ -7075,7 +7075,7 @@ p rin
  am ong
  bl own
   icing
-!” .
+!â .
  after wards
  r umble
  screw d
@@ -8063,7 +8063,7 @@ i ens
  Mad die
  c ongratul
  travel s
- � �
+ â 
 Sad ly
 p o
  al iens
@@ -8731,7 +8731,7 @@ F ire
  trans form
  dess erts
  M ine
-� �
+â ¦
 an ced
 r or
  G ill
@@ -8842,7 +8842,7 @@ st orm
  sun s
  d ing
 ay e
-” ,
+â ,
  pizz as
  zip s
  mill er
@@ -8892,7 +8892,7 @@ F ifi
  Fel ix
  pos sess
 s ers
-?” .
+?â .
 rag on
 wel come
 o f
@@ -9534,7 +9534,7 @@ p an
  bu nd
 col ored
  occas ion
-! ’
+! â
 d og
  chick s
 izz a

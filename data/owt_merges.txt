@@ -33,7 +33,7 @@ a r
   h
   d
 a s
-� �
+â 
 i c
  an d
  t h
@@ -71,7 +71,7 @@ o w
 i g
 s e
  f or
-� �
+â 
   A
 v er
 l d
@@ -104,7 +104,7 @@ er s
   P
  y ou
 k e
-  �
+  â
  c on
  d e
   r
@@ -146,7 +146,7 @@ o d
 u m
 u n
  e x
-� �
+â 
 a b
 re s
   N
@@ -192,7 +192,7 @@ T he
 i e
 ac k
 al l
- � �
+ â 
 re d
   J
  h as
@@ -386,7 +386,7 @@ en s
 ic k
  g et
 ve l
-. ”
+. â
  int o
 ou nd
 ir st
@@ -420,7 +420,7 @@ at es
 am p
  s he
   ro
-, ”
+, â
  c o
 ver s
  p ol
@@ -449,7 +449,7 @@ ic t
  tw o
 h ing
 w e
-� �
+â 
 o v
  s er
  s pe
@@ -481,9 +481,9 @@ at er
  w ant
 d ay
 u al
- � �
+ â 
 is e
- � �
+ â 
 r it
  year s
 se l
@@ -701,7 +701,7 @@ v ing
 e f
 st em
  o b
-� �
+â 
  wh ile
 i o
 al k
@@ -955,7 +955,7 @@ i ent
  g ot
  e ach
  qu est
- � �
+ â 
  v ot
 Th is
  ar t
@@ -1320,7 +1320,7 @@ ion al
  work ing
 I f
  l ine
-� �
+â ¦
 i ol
  bec ome
  C an
@@ -1535,7 +1535,7 @@ b ook
 it ive
  avail able
  proble m
-� �
+ã 
 oc i
  W hen
  n on
@@ -1642,7 +1642,7 @@ sel ves
  al most
  f oc
 an a
-� �
+â 
  ser ies
  ind ust
  l ow
@@ -1657,7 +1657,7 @@ ab ility
 ition al
  look ing
  1 6
-  �
+  Â
  acc ount
 og rap
  s ix
@@ -1875,7 +1875,7 @@ I S
  le arn
 ri ed
 y n
-� �
+ã 
  dec ision
  w rote
 am ed
@@ -2029,7 +2029,7 @@ viron ment
 il t
  in j
 l ike
-� �
+â 
 ace book
  prov ide
  wom an
@@ -2104,7 +2104,7 @@ t ime
  l ost
  ex c
  every one
-� �
+Ã ©
  A b
  5 0
  tr ack
@@ -2306,10 +2306,10 @@ ate g
  r ate
  app lic
 pr il
-� �
+ã 
  pr im
  ris k
-  �
+  Ð
  ne cess
 al t
 ag ing
@@ -2674,7 +2674,7 @@ ru ction
  te xt
  Nove mber
  co ver
-” .
+â .
  p ers
 en ed
 4 0
@@ -2749,7 +2749,7 @@ av y
  p aper
  m ention
  Oct ober
-? ”
+? â
  per fect
  for ces
 E S
@@ -2763,7 +2763,7 @@ i ant
  eng ine
  tr aining
 u f
-� �
+Ð ¾
 I T
 ib ly
 und red
@@ -2931,7 +2931,7 @@ im ately
 is ions
  m iddle
  sp okes
-� �
+Ð µ
  L ondon
  he ar
  M ore
@@ -2977,7 +2977,7 @@ ent ially
  res our
 ro om
  bl ood
-� �
+Â ­
  pri or
 e ff
  reg ul
@@ -3109,7 +3109,7 @@ H E
  us er
  sc reen
  fail ed
- � �
+ Â £
 ar i
 ines e
  C ons
@@ -3139,7 +3139,7 @@ t ain
 A M
  pl atform
  effect s
- � �
+ â ¦
 in ary
  gu ys
  E ven
@@ -3206,7 +3206,7 @@ it ute
  pass ed
  per haps
 B I
-� �
+â  
  d ate
 amp ions
  imp lement
@@ -3269,7 +3269,7 @@ ru pt
 ress ion
  appear s
  op in
-� �
+Ð °
 ri ef
 h a
  help ed
@@ -3386,7 +3386,7 @@ U S
 ol ute
  charac ters
  organ ization
-  �
+  â
  co ol
  mov ing
  larg est
@@ -3853,7 +3853,7 @@ ro id
  b rief
  cred it
  app l
-. ’
+. â
  un c
  deter min
  record s
@@ -3868,7 +3868,7 @@ um an
  st ation
  author ities
  behav ior
-” ,
+â ,
  c ry
 O U
  m ount
@@ -3958,7 +3958,7 @@ out hern
  te ac
  deb t
  ent er
-� �
+Ð ¸
  neg oti
  c ars
  P ress
@@ -4063,7 +4063,7 @@ p oint
  typ es
 ear s
 oc r
-� �
+Ñ 
  announ ce
 az ing
 ill er
@@ -4221,7 +4221,7 @@ we ll
 k nown
  res ist
  Inst itute
-� �
+â ¢
  dec ade
  expl ain
 F C
@@ -4261,7 +4261,7 @@ ac ity
  S ince
 w orks
 im b
-� �
+â 
 ar io
  exist ing
  Sec urity
@@ -4321,7 +4321,7 @@ ct ors
  inj ury
 land s
 ann el
-� �
+Ñ 
  gu ard
  laun ched
  sp orts
@@ -4464,9 +4464,9 @@ e qu
  del iver
  comp ar
  requ ires
-� �
+Ñ 
  gu ess
-� �
+ï ¼
  sur vey
  A re
  ra ise
@@ -4496,7 +4496,7 @@ ig an
  l ength
 ow l
 i est
-! ”
+! â
 is f
  t ask
  con sequ
@@ -4593,7 +4593,7 @@ ruct ure
  200 5
  set ting
  miss ing
-� �
+â 
 are n
 u ct
  comm itted
@@ -4665,7 +4665,7 @@ re al
  su st
  keep ing
  g ender
-о �
+Ð¾ Ð
  wind ow
  upd ate
  G roup
@@ -4727,7 +4727,7 @@ H L
  dep end
  Rich ard
  un its
-� �
+Ã ¡
  Ph oto
  R yan
  dec ide
@@ -4976,7 +4976,7 @@ all s
  develop ing
  sc r
  s itting
-  ■
+  â 
  f ol
 ap ers
  stre ets
@@ -5006,8 +5006,8 @@ I ON
  pot entially
  inter act
 U T
-  �
-  �
+  Ã
+  ì
  author ity
  conv ention
  att orney
@@ -5046,8 +5046,8 @@ o om
  co ld
 is er
  sign s
-� █
-█ �
+ â
+â â
  p it
  oper ating
  cap acity
@@ -5353,7 +5353,7 @@ re ens
  ad vert
  f ly
  can n
-� �
+Ð ½
  F ree
  acc ident
  Par is
@@ -5429,7 +5429,7 @@ H is
 por ary
  R od
 W ell
-� �
+ã 
 An other
  cont rast
  R el
@@ -5675,13 +5675,13 @@ ot y
  Ch arl
  material s
  sub sequ
-, ’
+, â
  find ings
  A T
  dep art
  g ra
  ex cell
-� �
+Ã ³
  conf ident
  set s
  list ed
@@ -5746,7 +5746,7 @@ l i
 c alled
 ab led
 ab in
-� �
+Ã ­
  he ll
  mess ages
  rout e
@@ -6398,7 +6398,7 @@ or a
  Char les
  vol unte
 u gh
-� �
+Ð »
  H ol
 ack ing
  R ight
@@ -6474,7 +6474,7 @@ m em
  fl u
 in ations
  sh o
-’ .
+â .
  C y
  auth ors
  bu g
@@ -6536,7 +6536,7 @@ O b
  De v
  invol ving
  mechan ism
-� �
+Ã ¤
  f ighters
  fif th
 ger y
@@ -6602,7 +6602,7 @@ C A
 ot es
  fol ks
  Soc iety
-— �
+â â
  techn ologies
  sudden ly
 lud ing
@@ -6622,7 +6622,7 @@ GB T
  p ip
  max imum
  Cont in
-� —
+ â
  L ight
 we ight
  particip ants
@@ -6748,7 +6748,7 @@ ath y
  employ ee
  K n
 as ters
-  �
+  Î
  loc ations
  find s
 end ers
@@ -6789,7 +6789,7 @@ ig ation
  inform ed
  P y
  des per
-� �
+ ¬
  contro lled
  camp us
  new ly
@@ -6913,7 +6913,7 @@ r ary
  be ar
  any more
  cy ber
-� �
+Ã ¶
  T it
 ce ler
  B est
@@ -6996,7 +6996,7 @@ in er
  collect ed
 b ell
 w an
-� �
+Ã ¼
 i ro
  we ird
  pun ish
@@ -7046,7 +7046,7 @@ ld er
  dist inct
 hip s
  s and
-� �
+ï ¿
  academ ic
  def ence
  end ing
@@ -7251,7 +7251,7 @@ d a
  r us
  law makers
  D ark
-’ ,
+â ,
 b ec
  6 4
  compl aint
@@ -7259,7 +7259,7 @@ b ec
 n ame
  B ell
 5 6
-  ’
+  â
 if ies
  en able
 sc ape
@@ -7316,7 +7316,7 @@ M ar
  feel ings
  ant icip
  a ver
-� �
+Ñ 
  N ick
  C irc
  F C
@@ -7426,7 +7426,7 @@ c ar
  r iver
 pr ise
  As h
- � �
+ â ¢
  cry pt
  ind ex
  F ield
@@ -7587,7 +7587,7 @@ er m
  every where
  strugg ling
  creat es
-■ �
+â  â
  rid ic
 abin et
  th ick
@@ -7604,7 +7604,7 @@ mon th
  ill ness
 ch ain
 ad i
-  �
+  ë
 the w
  Die go
  bl ind
@@ -7615,7 +7615,7 @@ T H
 f ound
  withd raw
  4 6
-� �
+ 
  wonder ful
  Foot ball
 i el
@@ -7637,7 +7637,7 @@ Th ose
  P S
 4 00
  cor ruption
-� ■
+  â 
 we et
  P arliament
  coll apse
@@ -8008,7 +8008,7 @@ d oor
  disc overy
 i ability
  equ ally
-� �
+ã ¼
  p ig
  welf are
  col ors
@@ -8064,7 +8064,7 @@ ow ing
  as ks
  fall en
  improve ments
-� �
+Ð º
 ov al
 d s
  h ide
@@ -8177,7 +8177,7 @@ am ac
  pe ak
  ground s
 m ad
-� �
+Ù 
  Gold en
  dram atic
  D id
@@ -8247,7 +8247,7 @@ c a
  Arab ia
  F A
 er ia
-  �
+  Ø
 u its
  Squ are
  eff iciency
@@ -8332,7 +8332,7 @@ amac are
 ra pped
  R and
  fl ash
-� �
+ã ®
  M useum
  Ok lahoma
  implement ed
@@ -8388,7 +8388,7 @@ G E
  f ro
  i P
 c ut
-� �
+ð 
  R ef
  M ah
  bo at
@@ -8418,7 +8418,7 @@ F F
  F ed
  cl im
 k ing
-� �
+Ä 
 ab eth
  cele b
 th on
@@ -8452,7 +8452,7 @@ inc luding
  f oss
  al ert
  tweet ed
-� �
+ì 
  guarant ee
  hand ed
  M aster
@@ -8533,7 +8533,7 @@ S te
  dis pl
  Haj ime
 iv als
-� �
+Ã ±
  s in
  pass engers
  capt ain
@@ -8740,7 +8740,7 @@ w as
 ab e
 aed a
 F l
- ( “
+ ( â
  che cks
  abandon ed
  K at
@@ -8753,7 +8753,7 @@ F l
 arg o
  X box
  ent r
-ó n
+Ã³ n
  e c
  l ocked
 St ill
@@ -8779,7 +8779,7 @@ V P
 " .[
  j un
  A p
- � �
+ â 
  - >
  w rest
  tact ics
@@ -8794,7 +8794,7 @@ ord on
  W ik
  D O
  c ow
-  �
+  ×
  st ake
  r amp
  meas ured
@@ -8828,7 +8828,7 @@ B ack
  replace ment
  assess ment
  sub scrib
-� �
+Å 
  sen ator
  B ureau
  but t
@@ -8894,7 +8894,7 @@ ag h
  d ates
  t ips
  W olf
- � ��
+ â ¬
  H o
  U lt
 Th ough
@@ -8937,7 +8937,7 @@ ar ity
 cept ions
  Jon athan
 qu est
-� �
+ï¿ ½
  c ul
 ound ing
  polit ically
@@ -9000,7 +9000,7 @@ Y et
  threat ening
  Cont rol
 ri ent
-� �
+Ð ¼
  f estival
  bl ast
 AN D
@@ -9127,7 +9127,7 @@ irlf riend
  h ire
 it ary
 or ious
-� �
+ï ½
  conc ert
  question ed
 Ch rist
@@ -9148,7 +9148,7 @@ he ld
  mem o
 arch y
 usal em
-� �
+Ñ 
  R oss
  tr illion
   ..
@@ -9310,7 +9310,7 @@ con f
  sh irt
  Man agement
  ex ha
-� �
+Ð ²
  sav ings
 est y
  h osp
@@ -9358,7 +9358,7 @@ il ation
 om ed
 9 4
 ack et
-� �
+Ñ 
  inc hes
  super ior
  I ron
@@ -9375,7 +9375,7 @@ enn is
 ar ia
  e ase
  B urn
- � ��
+ â 
 og y
  dri ves
  tit led
@@ -9385,7 +9385,7 @@ og y
 B M
  g ross
  co inc
-� �
+Â ·
  round s
  bank ing
  Mary land
@@ -9795,7 +9795,7 @@ urrent ly
 ac hel
  R angers
 C al
-� �
+Ñ 
  L ine
  Sh ort
  pip eline
@@ -9922,7 +9922,7 @@ be ing
  B udd
  inter f
  b acter
-  �
+  ê
  present ation
  col our
 bre ak
@@ -10050,7 +10050,7 @@ h as
 ie v
  M ove
 - >
- � �
+ Ð ¿
  re nd
  top ics
 ol n
@@ -10133,7 +10133,7 @@ A Y
  sh ocked
  ang le
  Ch annel
-  с
+  Ñ
  sh ipping
  sustain able
 el son
@@ -10187,7 +10187,7 @@ AR T
 ivers al
 le ep
 rib utes
-� �
+â 
  ag ed
  camp s
  cho osing
@@ -10294,7 +10294,7 @@ Tr ans
  clos est
  town s
   `
-� �
+à ¸
  po ison
  198 9
 ren a
@@ -10406,7 +10406,7 @@ H P
  end ors
  design er
  tr aged
-� �
+Â °
 m ir
  L es
  Al b
@@ -10452,7 +10452,7 @@ a very
  speak ers
  199 3
  ad equ
-� �
+Ã ¢
  H art
  Le ft
  se ized
@@ -10525,13 +10525,13 @@ at tered
  describ ing
  ign or
  promot ion
-� �
+ë 
 o ft
 7 00
  Pitt sburgh
 im ize
  un necess
-� �
+ã ³
  Man ning
  min isters
  in herent
@@ -10581,7 +10581,7 @@ angu age
  inf ant
  th ro
 ok er
-� �
+Ä 
 ur ches
  peace ful
  explos ion
@@ -10633,7 +10633,7 @@ ah oo
  P ict
  elect oral
  b ird
-? ’
+? â
 ail able
  D R
  R aj
@@ -10786,7 +10786,7 @@ iz arre
  jun ior
  A y
  6 8
- � �
+ Ð ²
  con secut
  cook ing
  v enture
@@ -10814,7 +10814,7 @@ gg ed
  H ad
  prosec ution
 o vers
- Pok é
+ Pok Ã©
  Ab u
  F inal
  crim inals
@@ -10993,7 +10993,7 @@ May be
  susp ic
  av o
  pat ent
-� �
+Ã §
  as semb
  Red dit
  o ught
@@ -11105,7 +11105,7 @@ ab a
  sing ing
  st atic
 ent ures
-� �
+Ð ´
  out standing
 l aim
  sp otted
@@ -11177,7 +11177,7 @@ O ut
  devast ating
  f ingers
  arg uably
-� �
+ã 
  F arm
  organ is
  sub tle
@@ -11254,7 +11254,7 @@ v as
  c am
 t it
  Con c
-… .
+â¦ .
  M other
  creat or
 ver ning
@@ -11307,7 +11307,7 @@ Per haps
  Coll ins
  R ow
 ere n
- Poké mon
+ PokÃ© mon
 v ol
  deal t
  Comm ons
@@ -11334,7 +11334,7 @@ c ott
  des p
 B R
 ard o
-� �
+í 
  R ice
  fin ishing
  res erve
@@ -11417,7 +11417,7 @@ un a
 ot ion
 found er
  W ATCH
-� �
+â ³
  f ishing
  disapp eared
  198 8
@@ -11470,7 +11470,7 @@ n amed
 T IS
 viron ments
 b ably
-� �
+â 
  ins urg
  Mc L
  rif le
@@ -11478,7 +11478,7 @@ i ors
  Mit chell
  design ated
 W orld
-� �
+Â 
  promot ed
 th al
 il ateral
@@ -11593,7 +11593,7 @@ rit ical
  d ressed
  Rec ords
  appoint ment
-� �
+Ã ¨
  administ rative
  cour ses
  param eters
@@ -11658,7 +11658,7 @@ P s
  oper ators
  focus es
 win ning
-� �
+ã 
  diagn osed
 Un fortunately
  Hind u
@@ -11711,7 +11711,7 @@ friend ly
  emer ge
  Dak ota
  Comm and
-� �
+Ä 
  m ouse
  plan ets
  respond ing
@@ -11849,7 +11849,7 @@ c ular
  R T
  me ets
  plan es
- � �
+ Ð ½
  heart s
  dr inks
  m igration
@@ -11876,7 +11876,7 @@ B E
 ude au
  question ing
  cl uster
-” )
+â )
 lam m
  He art
 s ize
@@ -12117,7 +12117,7 @@ t ics
  F igure
  D anny
 it ate
-ل �
+Ù Ù
  sum mary
 at al
  sacr ifice
@@ -12187,7 +12187,7 @@ oc ity
  8 8
  log ical
  Rub io
-� �
+Ã ¥
 b age
 form ed
  dist ant
@@ -12202,9 +12202,9 @@ og g
 m ap
  prov incial
 es is
-� ’
+ â
  g aining
-’ �
+â â
  difficult ies
  L aur
  defend ers
@@ -12341,7 +12341,7 @@ Wh ite
  T odd
 olph ins
 M et
-с т
+Ñ Ñ
  l un
  pe ers
  fr ank
@@ -12408,11 +12408,11 @@ f old
  human itarian
  anticip ated
  her itage
-ー �
+ã¼ ã
 F S
  fac ulty
 M in
-� �
+Ñ 
 olog ically
  reveal ing
  Ch ap
@@ -12427,7 +12427,7 @@ G ame
  don ated
  R aid
 az y
-� �
+ã 
  ch ap
  C os
  < /
@@ -12439,7 +12439,7 @@ Wh ich
 ur ities
  grad ually
  bar rier
-� �
+â 
 S ch
  r ice
  c ats
@@ -12600,7 +12600,7 @@ E E
  I an
  Sp urs
  De an
- � �
+ Â ©
  inn ings
  inter rupt
 c itation
@@ -12632,7 +12632,7 @@ bo ards
  deploy ment
  p owered
  trans mission
-� �
+Ø §
  Cam bridge
 20 13
 ar ians
@@ -12669,14 +12669,14 @@ arent ly
  J ess
  h ier
  Turn er
-� �
+ë ¤
 ament o
 m atic
  Sp encer
 A G
  ret reat
  head line
-� �
+ã ¯
  cr ude
  fem ales
  rec alls
@@ -12859,7 +12859,7 @@ in itely
  B os
 ort heast
 m art
-� �
+Å ¡
  l ake
  d ivers
 B est
@@ -12909,7 +12909,7 @@ i op
  crowd s
  L AC
 on i
-� �
+Ñ 
  wh ales
 b ull
  routine ly
@@ -12924,7 +12924,7 @@ oc c
  prev al
 ous ing
  Super man
-  �
+  ï¼
  l oving
  dis g
  ment ally
@@ -12934,7 +12934,7 @@ cont rolled
 le ton
  un ity
  ex empt
-� �
+ã «
  ap ology
 pro duct
  Pol ish
@@ -13024,7 +13024,7 @@ bor ough
  emot ion
  decre ased
  magn itude
-  �
+  ð
  R ound
  N in
  unf ortunate
@@ -13083,7 +13083,7 @@ ub es
  p izza
 id ad
 h al
-� �
+Ä 
  ed ited
 Ph ot
  altern atives
@@ -13121,7 +13121,7 @@ h ome
  St re
 rop olitan
 d i
-é s
+Ã© s
 im age
  contro lling
  B att
@@ -13149,7 +13149,7 @@ K ey
  avo ided
 ur i
 S em
-� �
+ä ¸
  rec ount
  L ane
  Sen ior
@@ -13207,7 +13207,7 @@ ec onom
 g al
  res on
  inv ite
-� �
+Â ®
 ut ical
  approach ing
  regul ators
@@ -13237,11 +13237,11 @@ S y
  j ew
  high way
  b ones
-� �
+ã 
 ic ut
  path s
  mill enn
-р а
+Ñ Ð°
  l aser
  Bang l
 res a
@@ -13326,7 +13326,7 @@ A nt
  last ed
  del ays
  su ed
-� �
+Â £
  fr action
  ext ends
  ur ge
@@ -13365,7 +13365,7 @@ se en
 ibl ical
 ( );
 are ttes
-� �
+ï ¾
  wor n
  found ing
  conduct ing
@@ -13399,7 +13399,7 @@ dri ven
  R y
  Dougl as
  Sol ar
-… ”
+â¦ â
  Cor byn
  D ublin
  should ers
@@ -13615,7 +13615,7 @@ ur ring
  super hero
  J a
  B L
-� �
+ã §
  fl ows
  work force
 as ma
@@ -13647,7 +13647,7 @@ az ed
  char ter
  M arl
  reg ards
-� �
+ã ¦
  pe pper
  implement ing
  unc ons
@@ -13806,7 +13806,7 @@ st age
  Mil waukee
  J ake
  bus es
- � �
+ Ð ¾
 os aur
  G reens
 pr ing
@@ -13836,7 +13836,7 @@ g roup
  med al
  fold er
  incent ives
-� �
+× 
  den ial
  S i
  Michel le
@@ -13923,7 +13923,7 @@ orn s
  c od
 ar se
  1 10
-� �
+Â 
  trad itions
  qu ery
  fresh man
@@ -13934,7 +13934,7 @@ oth y
  Co ach
 ale y
  Q ur
-i ón
+i Ã³n
  E X
  G ates
  exp ose
@@ -13950,7 +13950,7 @@ iv ic
  G onz
  C arson
 mun ition
-� �
+á ¹
  st ays
  par ade
  bet ray
@@ -13999,7 +13999,7 @@ RE S
  sh y
  in sect
  lect ure
-. “
+. â
 ul k
 os i
  loc als
@@ -14025,22 +14025,22 @@ l ain
  whe els
  R ush
  histor ian
-о� �
+Ð¾Ð ²
  S omething
 ne apolis
  rub ber
 le m
-е р
-  �
+Ðµ Ñ
+  Ï
  p ile
  Un ity
 H ouse
  sk ull
  play back
-� �
+ã ª
  affect ing
 i ots
-� �
+â 
  n odes
  B our
  mem orable
@@ -14141,7 +14141,7 @@ B rit
  shoot ings
  int end
  A CL
-е н
+Ðµ Ð½
 F igure
  bes ides
 te am
@@ -14184,7 +14184,7 @@ D ec
 oot ing
  Mar athon
 ING TON
-= ”
+= â
 E v
  am munition
  cl one
@@ -14282,20 +14282,20 @@ ern ess
  demonst rations
  prop ri
 put ed
-� �
+Ã £
  ch ase
-� �
+ã 
  sens ors
  med ication
 lev ant
 Americ ans
-” —
+â â
  Rich mond
  f ond
  E is
  convinc ing
 ab ul
-� �
+Å ¾
  count ed
  Ar med
 ling ton
@@ -14458,7 +14458,7 @@ M er
  c u
  bl ade
  process or
-� �
+ã ¤
  sp ends
  legisl ators
  spir its
@@ -14478,7 +14478,7 @@ ane ous
  enc ryption
 AR A
  o h
-� �
+â ¢
 e or
 am as
  r age
@@ -14499,7 +14499,7 @@ G M
  K rist
  name ly
  aff irm
-� �
+ã 
  consist ency
  fan cy
  cool ing
@@ -14519,7 +14519,7 @@ al so
  Col omb
  sn ap
 O rig
-� �
+Ð ·
  H ud
  mal ware
  l uc
@@ -14658,7 +14658,7 @@ ri el
  Q B
 A FP
 ain able
-� �
+ã 
 p ic
 am y
 U PDATE
@@ -14669,7 +14669,7 @@ I RE
 AR D
  d ive
  viol ating
- � �
+ Â ­
 gr icult
  rep os
  exam ination
@@ -14732,7 +14732,7 @@ eter min
  except ional
  prem ier
  ju ice
-  �
+  Ù
 ag ging
  coc aine
 p ound
@@ -14765,9 +14765,9 @@ es ity
 epend ence
  acc using
  Wall ace
-  █
+  â
  worry ing
-� �
+ì 
  schem es
  Mem bers
  cor rid
@@ -14856,7 +14856,7 @@ ort ions
  Q atar
  pron ounced
 ang o
-ã o
+Ã£ o
 ange red
  St ring
  Em ploy
@@ -14869,7 +14869,7 @@ ange red
 A f
  hor izont
  F at
- █ █
+ â â
  cl ause
  v on
  l iver
@@ -14931,7 +14931,7 @@ ent ions
  mod ify
  rev ised
  art ic
- � �
+ â 
  assault ed
  dr ill
  suppl ied
@@ -15008,7 +15008,7 @@ s im
  br ush
  N eg
  risk y
- � �
+ Ð ¸
  Ne ither
  pl aint
  Liber als
@@ -15026,7 +15026,7 @@ k ens
 ast ing
  fl ank
  le ather
-� �
+Â »
  spec ify
  opt ed
  con vey
@@ -15114,12 +15114,12 @@ uten ant
 Ty pe
  eru pt
  R C
-� �
+Ä ±
 ith ub
  somet ime
  expect ation
  L oad
-� �
+ã ¨
  C ape
  C BC
  M atter
@@ -15230,7 +15230,7 @@ so ever
  the or
  p orts
  Pal mer
-. —
+. â
  regul ate
  over see
  D ynam
@@ -15331,7 +15331,7 @@ L ab
  volunt ary
  constrain ts
 bl og
-י �
+× ×
  P ence
  qu o
  d read
@@ -15407,7 +15407,7 @@ oun ters
  W ing
  Hug hes
 pro du
-� �
+ã 
  he m
 u ity
  at e
@@ -15579,7 +15579,7 @@ ul ates
  N exus
 ri pp
  Hall oween
- � �
+ â 
 rit ies
 P erson
  relig ions
@@ -15647,7 +15647,7 @@ ment ioned
 ade qu
 ri ages
  record ings
- � �
+ Â «
  Ag ree
  cor ps
 ny der
@@ -15698,7 +15698,7 @@ m ans
  shut down
  Leg al
  L ost
- � �
+ Ã 
  by pass
  evolution ary
  Tra il
@@ -15718,7 +15718,7 @@ T im
  F inn
  A CC
 D aniel
-� �
+ë 
  neutral ity
  m igr
  s i
@@ -15730,10 +15730,10 @@ zb ollah
 M ac
 W ASHINGTON
  str ings
-… �
+â¦ â
  President ial
  M urd
-� …
+¦ â¦
 Bl ue
  hack ed
  tact ic
@@ -15771,7 +15771,7 @@ pl ess
  Kn icks
  comprom ised
  land l
-� �
+ì ´
  assign ment
  Sur v
  C ond
@@ -15822,7 +15822,7 @@ gr at
 app ro
  achieve ments
  Ob serv
-� �
+Ã º
  Week ly
 aus ible
  disc ourse
@@ -15861,7 +15861,7 @@ A pril
  Creat ive
  intrig uing
  org ans
-.’ ”
+.â â
 st ick
  hol idays
  C u
@@ -15900,7 +15900,7 @@ war f
  glob ally
  Bir mingham
 V ID
-� �
+Ñ 
  int ake
  P ink
  Ph D
@@ -15999,7 +15999,7 @@ medi ate
  dis k
  Ell is
  symbol s
-� �
+Î ±
  .. ..
  Pr im
  Nash ville
@@ -16016,7 +16016,7 @@ ab we
  far mer
  place ment
  Ob ject
- � �
+ Â ±
  free ze
  const itute
  manufact ured
@@ -16030,12 +16030,12 @@ i ably
  Word Press
  Malays ia
 V I
-� �
+ ×
 om atic
  N E
 F ox
  del ivers
- � �
+ Â §
 ai res
  coll ision
  n aming
@@ -16114,7 +16114,7 @@ an ic
  Pr int
  Har am
  sw ap
-� �
+ã ¹
  M aur
  tr icks
  Cons ider
@@ -16176,7 +16176,7 @@ arm ing
  sket ch
  L oc
  Occup y
-� �
+Ù 
 C OM
 n ut
 ick er
@@ -16200,13 +16200,13 @@ os ures
 gom ery
  Med iterranean
  pl ural
-� �
+Â ©
  T ask
  Ch ip
  div ine
 In vest
  my st
-á n
+Ã¡ n
 Ob viously
  rel iability
  synt hes
@@ -16215,7 +16215,7 @@ ibl ings
  comple ment
 ur ry
  bus h
-� �
+â 
 d ollar
 [ /
 off icial
@@ -16235,7 +16235,7 @@ omet own
  Mon ster
  Arab ic
  Dem ocracy
-� �
+Ã 
  guarant ees
  belong ing
  proceed s
@@ -16246,7 +16246,7 @@ ol ith
  deliber ate
 IG HT
 fr ame
-� ·
+· Â·
 IF A
  Pal m
 c ulation
@@ -16326,7 +16326,7 @@ b as
 k ar
  ret ained
  since re
- � �
+ Â 
  jo ins
  wh oles
  breat he
@@ -16339,7 +16339,7 @@ ed uc
  we ighed
  evangel ical
  fact ion
-� �
+Ù 
 C ON
  Teh ran
 M E
@@ -16454,7 +16454,7 @@ in burgh
  Gard ner
  cance led
  lad der
-· �
+Â· Â
  sm ok
  troub les
 cl osed
@@ -16530,7 +16530,7 @@ ean or
  Broad way
  buff er
  sovere ign
-� �
+ê ³
  Jo el
  Y e
  w ard
@@ -16539,7 +16539,7 @@ ean or
  be ans
  ident ities
  B ills
-� �
+Ð ¿
  flow ing
  elim inating
 ilit ary
@@ -16611,7 +16611,7 @@ ers ed
  tr im
  cryptocur rency
  Simp son
-� �
+ä º
  start ups
  b ru
  ro g
@@ -16671,7 +16671,7 @@ E vent
 is co
 ib bean
  Fer r
-� �
+ë 
  R ange
  cur ric
 cent er
@@ -16704,7 +16704,7 @@ k ill
  load s
  Com ic
  consult ation
-л и
+Ð» Ð¸
  extrem ist
 Sub scribe
 on ut
@@ -16756,7 +16756,7 @@ olit ics
  tro phy
  r anges
  conce aled
-� �
+ê °
 ~~ ~
  annoy ing
  G P
@@ -16780,11 +16780,11 @@ ur ious
 ear th
  se gments
 om on
-� �
+ã 
  C ort
  b ans
  o we
-� �
+ã 
 ] ;
  col ored
  hy pe
@@ -16792,7 +16792,7 @@ om on
  r ip
  consum ing
 De velop
-í a
+Ã­ a
  St rip
  e ld
 ograp her
@@ -16838,7 +16838,7 @@ m ember
 le en
 o ir
 B as
-� �
+Ù 
 th reat
  M ons
  a fore
@@ -16868,7 +16868,7 @@ um ed
  con grat
  M all
  inc arcer
-� �
+ 
  sc are
 anc ies
  l ending
@@ -16888,7 +16888,7 @@ an ies
 T ra
 le ased
  sch izophren
- � �
+ â 
  l ion
  p und
 ys on
@@ -16898,7 +16898,7 @@ ys on
  t ales
  promot ional
  Nor we
-� �
+Ã  
  W or
  clar ify
  habit at
@@ -16951,7 +16951,7 @@ um ar
  sm iling
  amb ul
  depend ence
-� �
+ì 
  Roman ia
  un law
 ber ger
@@ -17016,7 +17016,7 @@ ys ical
 q a
  reprodu ctive
  inc om
-… ]
+â¦ ]
 o at
  h ometown
 se arch
@@ -17068,7 +17068,7 @@ ook ie
  mass acre
  s od
 et c
-“ (
+â (
 it ations
  G am
 ob a
@@ -17171,7 +17171,7 @@ ut an
  K ids
  system atic
  ch asing
- � �
+ Ð ´
  cl ips
  r ipped
 ch ief
@@ -17185,7 +17185,7 @@ author ized
 b ra
 il ers
 u art
-─ �
+â â
 h at
 n ia
  man ually
@@ -17206,7 +17206,7 @@ uck ed
  share holders
  depos it
 l isted
-” ).
+â ).
 C le
  po le
  br idges
@@ -17252,7 +17252,7 @@ F ive
  indic ator
 ire ction
  protest ing
-� �
+Ð ¹
  academ ics
 cons cious
  en rolled
@@ -17285,7 +17285,7 @@ T er
 b ank
  euro s
  u m
-” :
+â :
  C OM
  nost alg
 C all
@@ -17474,11 +17474,11 @@ lev ision
  amb ition
  Pre vention
  St range
-� �
+Ã ¸
  dis ruption
 are a
  US C
- � �
+ Î ¼
  G raph
  bl at
 c ision
@@ -17497,8 +17497,8 @@ m el
  po ised
 uss ions
 F ull
-� �
- � �
+ã ¢
+ Ð º
 lev ard
  consist ed
  Car roll
@@ -17547,7 +17547,7 @@ charg ed
  mos qu
  add ict
  max im
-” ?
+â ?
  l b
  sens ation
 sc ript
@@ -17558,13 +17558,13 @@ o os
 ter ing
 un n
  S ite
- � �
- � �
+ Â ¤
+ Â °
  prim aries
 eal ous
  uns upp
  mer cy
- ■ ■
+ â  â 
  explo ited
  forg ot
  pig s
@@ -17651,7 +17651,7 @@ ues e
  hum ble
 20 19
  connect ivity
-� �
+â 
  reflect ing
  Great er
  B uc
@@ -17733,7 +17733,7 @@ s an
 ir ies
  over view
  activ ated
-� �
+ã 
  personal ities
 oles ter
  ir ony
@@ -17755,7 +17755,7 @@ m ph
 O k
  car n
  ind ividually
-� �
+â ²
  le ase
   000
  b ored
@@ -17765,12 +17765,12 @@ O k
  dev il
  ar rog
  F ear
-ü r
+Ã¼ r
  ver bal
  Fred er
 ason able
  nut rition
-  �
+  í
  Amb assador
  int ro
  F ight
@@ -17779,7 +17779,7 @@ m ean
  hilar ious
  Reyn olds
 s ite
-� ─
+ â
  loc ate
  D rop
 ident ified
@@ -17789,7 +17789,7 @@ rest rial
  D anish
  element ary
  boss es
-� �
+Î ¿
  N HS
  mis er
  Cont act
@@ -17886,7 +17886,7 @@ W as
  F IFA
  Norwe gian
  un m
-� �
+ 
  The ory
  happ ily
  capt uring
@@ -17971,7 +17971,7 @@ p res
 iv ia
  ank le
  J et
-� �
+Å 
  inc ap
  w ives
  Le ave
@@ -17989,7 +17989,7 @@ w age
  Boy s
  thread s
  synt ax
- � �
+ Ø §
  bre eding
  We instein
  vend or
@@ -18002,7 +18002,7 @@ h ouses
  En forcement
  W ITH
  tradem ark
-� �
+Ù 
 he y
  ab ortions
 D O
@@ -18027,7 +18027,7 @@ it ially
  Arch itect
  affili ated
  Ind igenous
-т о
+Ñ Ð¾
  App arently
 al one
  ur anium
@@ -18037,7 +18037,7 @@ al one
 d imensional
 ar ah
 l us
- “ [
+ â [
 He alth
 io let
  access ed
@@ -18078,7 +18078,7 @@ reg ular
  m g
 igg ins
  demonst rating
-� ��
+â 
  Cole man
  cl iff
  Pr adesh
@@ -18296,7 +18296,7 @@ ok ia
 atter y
  bound ary
  Sum mit
-� �
+ï¿ £
  Dar win
  frag ile
  blank et
@@ -18407,7 +18407,7 @@ ic ans
  G or
  Blu etooth
  Mem phis
- � �
+ Â »
  quick er
  self ish
  F ace
@@ -18428,7 +18428,7 @@ ic ans
  W elsh
 f ood
 N E
-� �
+æ 
  direct ive
  serv ants
  understand able
@@ -18438,7 +18438,7 @@ rop he
  Reg ister
  dis gu
  comb inations
-� ��
+â ¬
  Es pecially
  E instein
  mos que
@@ -18449,7 +18449,7 @@ rop he
  St alin
  pl ausible
  D ew
-á s
+Ã¡ s
  an ecd
 00 1
  c ared
@@ -18457,7 +18457,7 @@ rop he
  be am
  re nown
  PC s
-о� �
+Ð¾Ð ¼
  C ash
  deleg ation
  P ret
@@ -18470,14 +18470,14 @@ p aper
  V I
  V A
  E L
-” ),
+â ),
 el ines
  Veter ans
 Feb ruary
 AC E
 qu in
 c ot
-� �
+ê³  
  D I
 r ays
  H i
@@ -18518,7 +18518,7 @@ m ount
  l ith
 C ome
  ref und
-� �
+ã ¾
  access ories
 I ran
  R idge
@@ -18540,10 +18540,10 @@ Republic an
  v ag
  adv ent
 j pg
- н а
+ Ð½ Ð°
  Expl orer
  prol ifer
-т а
+Ñ Ð°
 ass an
  cur iosity
  des irable
@@ -18551,7 +18551,7 @@ ass an
  O ften
 Con clusion
  Brend an
-� ��
+× ×
  D erek
 Qu est
 p aid
@@ -18570,7 +18570,7 @@ Ch ild
  Cre ate
 met ic
 ind ust
-� �
+í 
 hy d
  H onda
 add afi
@@ -18736,7 +18736,7 @@ uff s
  Ow en
  cort ex
 S IS
-ac ión
+ac iÃ³n
  W ang
  erupt ed
 B Y
@@ -18766,7 +18766,7 @@ cast ing
  Pro bably
  enfor ced
  H od
- ( £
+ ( Â£
  band width
  aster oid
  Dra ke
@@ -18775,7 +18775,7 @@ cast ing
 Wind ows
  met eor
 S w
-� �
+ì 
  d warf
 os ph
  L O
@@ -18794,7 +18794,7 @@ T able
  } );
  appl aud
  N ord
-� �
+Ã ¦
 b ucks
  new com
  pip es
@@ -18862,7 +18862,7 @@ O H
  Sc reen
  st ones
  & &
-� �
+ã £
  Cl int
  connect s
 D isc
@@ -18940,7 +18940,7 @@ ia o
  vol atile
  Turn bull
 ind a
-” ;
+â ;
 P ER
  Bash ar
 as is
@@ -18953,7 +18953,7 @@ sh ine
  st aged
  Christ ina
  p ills
-� �
+Ã ª
  Jackson ville
 om ical
  fin ishes
@@ -19075,7 +19075,7 @@ amp ire
  ass ure
  Fr ame
  perform ers
-� �
+ã 
  Day ton
  confir ming
  pop ulated
@@ -19155,7 +19155,7 @@ Al ong
  method ology
  critic ize
  disapp ro
-� �
+Ð ³
 road s
  criticism s
  vacc ination
@@ -19200,7 +19200,7 @@ ant ry
  sh ade
  det on
  cr ush
-� �
+ã 
  low ered
  l over
  shoot s
@@ -19244,7 +19244,7 @@ W elcome
  their s
  sam pling
  an at
-� �
+ï¼ 
  the rape
  p enn
 Oct ober
@@ -19308,7 +19308,7 @@ man y
  crack ed
  coord ination
  hur ting
-� �
+Î ½
 D ate
  toler ate
  under cover
@@ -19484,7 +19484,7 @@ Ge orge
 th ouse
  obs ess
  st ain
-� �
+Ù 
 G L
  wrong doing
  matern al
@@ -19499,17 +19499,17 @@ G L
  buy er
  influ x
  st yl
-é e
+Ã© e
  Col lection
 ateg ory
-о� �
+Ð¾Ð »
  Richard son
  rob otic
  Ev an
  D iana
  reward ing
 fore st
-� �
+Î ¹
  soul s
  Dar ren
  gall ons
@@ -19603,7 +19603,7 @@ d eb
 W C
 l it
  past e
-� �
+Ñ 
  b rib
  M ead
  St ream
@@ -19615,11 +19615,11 @@ l it
  to dd
  recogn izes
  H aven
- � �
+ Ã ®
  C ensus
  sl ogan
  terr ified
-id ō
+id Å
  Del aware
  distingu ished
  SU V
@@ -19667,7 +19667,7 @@ l ived
 Op ening
  h ug
  S aw
-р е
+Ñ Ðµ
 c ro
  Leaf s
 B uild
@@ -19700,7 +19700,7 @@ Pro t
  lot tery
 ro e
  preval ence
-� �
+ï¼ ¿
  c otton
 ny c
  Nep al
@@ -19781,7 +19781,7 @@ L P
  rec ons
  belie vers
  Al ways
-� �
+Â 
  benef ited
 With in
  aw aken
@@ -19809,7 +19809,7 @@ role um
 M el
 int egr
 e on
-  �
+  ã
 C BC
 t im
 E s
@@ -19829,7 +19829,7 @@ ish ops
  request ing
  exclus ion
  e tern
-,’ ”
+,â â
  flood ed
  valid ity
 M ORE
@@ -19902,7 +19902,7 @@ d uty
  Indust rial
 ract ed
  Ab du
-т ь
+Ñ Ñ
  Holl and
  conj unction
  S ak
@@ -19947,7 +19947,7 @@ k ara
 m und
  appet ite
 O per
-� �
+å ®
  M Y
  H ook
  tw ins
@@ -19981,7 +19981,7 @@ L ou
  Nut shack
 ownt own
 t ake
-� �
+å 
  " [
 P age
  gener ator
@@ -20070,7 +20070,7 @@ m ails
 Con nor
  lung s
  r im
-� �
+ï¼ 
  Ab original
  geomet ry
 iol a
@@ -20117,7 +20117,7 @@ vas ive
 IS I
  B ert
  P ain
-! ’
+! â
 F orm
  beaut ifully
  K umar
@@ -20246,7 +20246,7 @@ St op
  st ellar
  deter mines
  Gab riel
- ██ █
+ ââ â
  stab bed
  relent less
  Murd och
@@ -20260,7 +20260,7 @@ c ur
  He ath
  em ission
  h over
-  é
+  Ã©
  Sm ash
  enjoy able
  a ven
@@ -20416,10 +20416,10 @@ J ones
  mot ives
  L AD
  mer ger
- � �
+ ì 
  repl icate
  r anged
-л а
+Ð» Ð°
  extract ed
  radio active
  E ld
@@ -20468,7 +20468,7 @@ v ideo
 aun ting
 gg y
  ON E
-ñ o
+Ã± o
  symp ath
  watch dog
  Hans en
@@ -20497,13 +20497,13 @@ c d
  agree ing
  s ights
 Al most
- � �
+ Ð °
  dig its
  visit or
  La unch
 H uman
  notice able
-� �
+Ð ±
  sn apped
  S kin
  innov ations
@@ -20527,7 +20527,7 @@ l ate
  metaph or
  infring ement
  rele vance
- ا ل
+ Ø§ Ù
  Hel en
 er k
 AN G
@@ -20626,7 +20626,7 @@ ir rel
  Jul ia
  S end
 UR L
-  у
+  Ñ
  devast ated
  inter ceptions
  up held
@@ -20643,7 +20643,7 @@ enc ia
 c ry
  coun cill
 y outube
-ö r
+Ã¶ r
  O g
 ie u
 ush i
@@ -20716,7 +20716,7 @@ Get ting
  explo its
  proud ly
  Or t
-� �
+â 
  IM R
 dri ving
  c av
@@ -20762,7 +20762,7 @@ ric ks
 pl aces
  surviv or
  Orig inal
-� �
+ê ¸
  pir acy
 st ill
 IC S
@@ -20786,7 +20786,7 @@ view s
  met als
  A be
  sl ap
-� �
+ã 
  S pl
  spe cially
  capt ures
@@ -20857,7 +20857,7 @@ D L
  V ision
  un ified
 C raft
-� �
+ã 
  parent al
  sal mon
 19 90
@@ -20934,7 +20934,7 @@ ra its
 st ract
 O O
  V el
-� �
+Ñ 
   ion
 R are
  ex ile
@@ -20976,7 +20976,7 @@ pl ates
 em p
  merch andise
  Juda ism
-� �
+È 
  R ise
 ort ium
  take over
@@ -21012,8 +21012,8 @@ am ount
  adoles c
  super st
 s il
- Jos é
-� �
+ Jos Ã©
+ã »
 ee red
  Com ing
  pro se
@@ -21101,7 +21101,7 @@ c ould
  soc io
  Ind ividual
  lab s
-� �
+ã 
  co erc
  Mon te
  vac ant
@@ -21144,7 +21144,7 @@ F oot
  misdem eanor
  M oy
 A BC
-� �
+ã ­
  Abdu llah
 AT S
 n ings
@@ -21154,7 +21154,7 @@ n ings
 / -
  stat istic
  object ion
- � �
+ Ð ¼
  content ious
  P ip
  aut op
@@ -21190,7 +21190,7 @@ spons ored
  Dani els
  T ac
 aid a
- ███ █
+ âââ â
 c ross
  Kr ish
 V ict
@@ -21199,15 +21199,15 @@ V ict
  ret ention
  1 19
 ustom ed
-� �
-� �
+ã 
+ã ¯
  rev ival
  Man uel
  coll ar
  imp ly
  select ive
  mer ge
-,’ ’
+,â â
 Other s
  unp aid
 red dit
@@ -21216,7 +21216,7 @@ red dit
  march ing
  na ive
  bur ial
-  �
+  ï½
  forecast s
  fundra iser
  side walk
@@ -21268,7 +21268,7 @@ keep ers
 US E
 P ot
 s cient
-н и
+Ð½ Ð¸
  meaning less
 stan bul
  s om
@@ -21333,7 +21333,7 @@ rom a
  sp ider
  cop ied
  contract ed
- � �
+ Ð ±
  week ends
  concept ual
 ut ory
@@ -21390,7 +21390,7 @@ Th ird
  Che v
  land sc
  circ ulating
- � �
+ â 
  dump ed
  cyber security
  commod ities
@@ -21474,7 +21474,7 @@ tr ue
  predict s
  f usion
  Bre aking
-� �
+Ã ¯
  vir uses
  craft ing
  Ann ual
@@ -21500,8 +21500,8 @@ com b
 r ice
 . --
 in ion
-� �
-� �
+ã ©
+ã ª
  mult inational
  crypt o
  sl ate
@@ -21536,7 +21536,7 @@ art en
 pict ured
 ump ed
 p ent
- �
+Â Â
 oc y
 OC K
 edd y
@@ -21544,7 +21544,7 @@ edd y
  develop s
  T rent
  Su nder
-� �
+ã 
  } ,
 P ict
  Aust rian
@@ -21593,7 +21593,7 @@ ched el
  N FC
  rem edy
  ur gency
- � �
+ ì 
  accident al
 ident ally
  dismiss al
@@ -21624,17 +21624,17 @@ ff ield
  suscept ible
  un ins
  R ig
-е т
+Ðµ Ñ
 od s
  p act
  g ays
 stand ard
  oper atives
  Post ed
-.” )
+.â )
  ge ography
  film makers
-� �
+ì §
 200 3
  rent ed
  Ad obe
@@ -21672,7 +21672,7 @@ D ue
  campaign ed
 w ave
  20 30
- � �
+ Â 
  up wards
  fr amed
  deep est
@@ -21747,7 +21747,7 @@ ess a
  Y ORK
 v on
 f u
- � �
+ Â ·
  dict ator
  mach inery
  undis closed
@@ -21775,8 +21775,8 @@ A ction
 pir acy
  myth ology
  ren amed
-� �
-� �
+Ø ±
+ì 
 P rior
  Web b
 r aining
@@ -21928,7 +21928,7 @@ z ai
  st umbled
  sho ppers
  Res earchers
-� �
+ï¼ 
  Kas ich
 IN S
 Calif ornia
@@ -21946,7 +21946,7 @@ im o
  g el
 og o
  m aid
- � �
+ â 
  M ong
  St age
 J ose
@@ -21991,7 +21991,7 @@ a unch
 ad an
  Zimmer man
 av ia
-� �
+ê° 
 th y
  [ ]
  Charl eston
@@ -22028,7 +22028,7 @@ ast ics
 person al
 Ar ch
  Quest ion
-р и
+Ñ Ð¸
 c irc
  Caval iers
 er ie
@@ -22039,7 +22039,7 @@ ad in
 W in
 c z
  g y
-� �
+ã «
  An kara
  Sy l
 v s
@@ -22144,7 +22144,7 @@ se ller
  M ate
  \ (
  S onic
-� �
+Ø ³
 Cons ider
  mon arch
  persu aded
@@ -22193,11 +22193,11 @@ Le vel
  gar nered
 air d
 ld a
-н о
+Ð½ Ð¾
  g ospel
  tra umatic
  ex terior
-� �
+ì 
  F T
  inqu iries
 f it
@@ -22255,7 +22255,7 @@ any on
  f ox
  h ats
  cho pped
-� �
+Â 
  learn s
  success ive
  mon key
@@ -22300,10 +22300,10 @@ ro z
  x en
 c aps
  B A
-r é
+r Ã©
  K ra
 A ri
-ン �
+ã³ ã
  stat utory
 im i
 ew ater
@@ -22394,7 +22394,7 @@ ang ling
  fore nsic
 re ne
 B at
-  �
+  å
  T i
  Th reat
  bl ues
@@ -22402,7 +22402,7 @@ it ures
  to re
 B ern
  S ize
-� �
+ã  
 On line
  My ster
  pen cil
@@ -22570,7 +22570,7 @@ h ops
 spe cial
 gl obal
 b uster
-� �
+Ã 
  Reg ulations
  AN Y
  Rel ated
@@ -22592,7 +22592,7 @@ iv o
 De ath
  Tr ain
  res umed
- [ …]
+ [ â¦]
 F un
 mean ing
 iv ist
@@ -22768,7 +22768,7 @@ f orth
  Re bell
  Bar rett
  Field s
-ñ a
+Ã± a
 if ts
  qu oting
  neighbour ing
@@ -22832,7 +22832,7 @@ M ic
  dun geon
 on so
  Re y
- � ��
+ â 
 um en
 ut in
  clos et
@@ -22917,7 +22917,7 @@ Sen ate
  L TE
  Comp ilation
  stake holders
-� �
+ê ²
  CON T
  Mac Book
  S ue
@@ -22961,7 +22961,7 @@ ma res
 our cing
  rob bed
  assess ing
-о� �
+Ð¾Ð ´
  rev olt
  depart ed
  19 43
@@ -23023,7 +23023,7 @@ Sec urity
 cr ime
 us able
  Op ening
- � �
+ Ø ¹
  pump ing
 art icle
  Rel igious
@@ -23032,7 +23032,7 @@ art icle
 Mus ic
 set ting
  ev apor
-è re
+Ã¨ re
  per t
  str anded
  rel ay
@@ -23051,8 +23051,8 @@ h ash
  B ungie
 S ad
  P av
-� �
- � �
+Ä «
+ â 
  E ther
  on ion
  not ions
@@ -23147,7 +23147,7 @@ i ak
 c as
 i ya
 ry s
-� �
+Å £
  ins ign
  exp ire
  pass er
@@ -23186,7 +23186,7 @@ g ithub
 g old
  Protest ant
  narc iss
-ar é
+ar Ã©
  c it
  nostalg ia
 ig ated
@@ -23196,7 +23196,7 @@ av ier
  gra ffiti
  L ar
  Ar g
-� �
+Ä 
  fam ed
  ] .
  out ward
@@ -23238,7 +23238,7 @@ r ue
  unre asonable
 es que
  trib unal
-  т
+  Ñ
  fl ick
  3 20
  S aid
@@ -23249,7 +23249,7 @@ M ag
 -- -------
  hist ories
 og ene
-� �
+ã 
  2 30
  Dep ending
  g amer
@@ -23257,7 +23257,7 @@ og ene
  P unk
  remember ing
  organiz ational
-о� �
+Ð¾Ð ³
  c apped
  expl ores
  ret ali
@@ -23277,7 +23277,7 @@ rop olis
  sky rock
 udd le
  contrace ption
-� �
+Ù 
 f igure
  v i
  V ers
@@ -23298,7 +23298,7 @@ a verage
 For ce
  front s
  co ached
-� �
+ã 
  ex ams
 op ened
  squ at
@@ -23431,7 +23431,7 @@ Act ivity
 u ously
  ric her
 L uc
-� �
+ï¼ 
  Holl ande
  tang ible
  Im am
@@ -23447,7 +23447,7 @@ hes is
  Don ovan
 k ok
  al phabet
- î n
+ Ã® n
  Re becca
 F ixed
 t z
@@ -23494,8 +23494,8 @@ iv or
 ib o
 estab lished
 P riv
-� �
-� �
+æ 
+ 
  voy age
 G ar
 j ar
@@ -23550,7 +23550,7 @@ ar ium
 olith ic
  cor rections
  F X
- ■■ ■
+ â â  â 
 nt on
 s afe
  Ku wait
@@ -23565,7 +23565,7 @@ st y
 i em
 y g
 mond s
-inc aré
+inc arÃ©
 ome z
  ass im
  belie ver
@@ -23604,14 +23604,14 @@ Cle arly
  out doors
  Frame work
 link ed
-� �
+ã ¬
 law s
 H I
  ing en
  H B
 on ial
 RE D
-� �
+é 
  se ated
  disc ern
  p ains
@@ -23687,7 +23687,7 @@ ow ler
 f y
  T M
  Hog warts
-� �
+ê¸ °
 J S
 ap i
 m ia
@@ -23709,7 +23709,7 @@ W estern
  ins iders
  t ighter
  Add itional
-� �
+Ð ¶
  add icted
  sh ores
  E state
@@ -23745,7 +23745,7 @@ l ich
 or st
  pe ek
  airst rikes
- bush idō
+ bush idÅ
  G S
 l ane
 con c
@@ -23775,7 +23775,7 @@ AM Y
  mer ged
  vill ains
  L imb
-о� �
+Ð¾Ð ¹
  f aded
  b olt
  rot ate
@@ -23787,7 +23787,7 @@ AM Y
  m esh
  Lind sey
  disrupt ive
-� �
+Ø ¨
 Go vern
 _ {
  Cro at
@@ -23842,7 +23842,7 @@ S ex
  sub ord
  bath rooms
  an th
-с к
+Ñ Ðº
  Budd h
  Bul let
 arn a
@@ -23853,7 +23853,7 @@ ter t
  Per u
  over ride
  k et
-� �
+× 
  m um
 ' ,'
  Anders en
@@ -23866,11 +23866,11 @@ G EL
 az er
  rad i
  I O
-  �
+  Å
 os o
 IL E
  M AN
-� �
+á »
  in on
  ser ge
  5 000
@@ -23937,7 +23937,7 @@ IS H
  play able
  C hes
 L ate
- � �
+ Â 
  execut ing
  ste er
  sp un
@@ -24002,8 +24002,8 @@ ru ed
 A bs
  prop s
  Sc ots
-� �
-� �
+Â ½
+ã 
 sh op
 f iction
  F lying
@@ -24064,7 +24064,7 @@ Rub y
  pair ing
  Ed gar
  Det ails
- � �
+ Ã  
  decre asing
  Jan et
  phenomen al
@@ -24136,7 +24136,7 @@ ex isting
  k idding
  demol ition
 L aughs
-н ы
+Ð½ Ñ
  harm less
  Applic ation
  c emetery
@@ -24163,7 +24163,7 @@ c ified
  dr ift
  par ole
  pe aked
-.’ ’
+.â â
  pe aks
  Do ctors
  defensive ly
@@ -24196,7 +24196,7 @@ J udge
  met ropolitan
  unle ashed
  mon keys
-“ [
+â [
 ! ),
  W yn
  Crit ics
@@ -24221,7 +24221,7 @@ IN K
  camp ing
  high ways
  7 50
-� �
+Â ´
  parent ing
  pred ator
  Un cle
@@ -24256,7 +24256,7 @@ iss ue
 its u
  Writ er
  supp lements
-  �
+  ï
  cart oons
  H ash
  as semble
@@ -24307,7 +24307,7 @@ ot ional
  instruct or
 us ually
  B rom
-� �
+Î µ
  pro active
  assert ions
 ext reme
@@ -24397,7 +24397,7 @@ C omb
 ack ets
 ... ]
 L u
-  �
+  Ñ
 st ruct
  magnific ent
  En c
@@ -24412,7 +24412,7 @@ M onday
  open ness
  the ology
  so aring
-� �
+ã 
  r ails
  development al
  leg ends
@@ -24459,18 +24459,18 @@ U t
 er ner
 P rop
 ind y
-е м
+Ðµ Ð¼
 o il
 18 8
  O C
 A z
-� �
+å 
  S ketch
 p ensive
 ism o
 10 6
 10 7
-� �
+Ï 
  stand ings
  Sp ike
  b ots
@@ -24516,7 +24516,7 @@ desc ription
  T IME
 in ator
  harm on
-� �
+â  
  re ver
 uper t
  Hyd e
@@ -24554,7 +24554,7 @@ reg ulation
  integr ating
 S cience
  Gree ks
-� �
+Ã 
  dom inating
  mand ated
  R iot
@@ -24663,7 +24663,7 @@ l ove
  R um
  C isco
  vol atility
- � ��
+ â 
 fil m
  prolifer ation
  C oy
@@ -24708,7 +24708,7 @@ astern ak
  qual ifications
  mel ted
  Vis a
-� �
+ë ¡
  r ang
  exceed s
  in mate
@@ -24776,7 +24776,7 @@ ot ally
  inspect ors
  Art ist
 omm end
- � �
+ ê ²
  C rim
  outf its
 J ay
@@ -24829,7 +24829,7 @@ ir ting
 it iveness
  pin ned
  D EA
-� �
+ë ¥
  tem po
 bn b
  set back
@@ -24894,7 +24894,7 @@ th ings
 just ed
 Just ice
  par cel
-� �
+ã 
  Ang lo
  discrim inate
  S ic
@@ -24999,7 +24999,7 @@ ass is
  gal axies
  oil s
 er re
-� �
+Å «
 AR S
 u u
 __ _________
@@ -25142,7 +25142,7 @@ ig hest
  sc ent
  commercial s
  adm issions
-� �
+ã 
  joint s
 comm ittee
  hall way
@@ -25195,9 +25195,9 @@ on el
  T ag
 et us
 ruct ions
- н е
+ Ð½ Ðµ
  Guant anamo
-� �
+à ¤
  f erv
  mean ings
  word ing
@@ -25212,7 +25212,7 @@ ser ving
  b ait
 ano ia
  River a
-� �
+ì 
  circumst ance
  Techn ical
  prop het
@@ -25237,7 +25237,7 @@ OU ND
  disproportion ate
  Nad al
  re app
-� �
+× ª
  W arm
  Alexand ria
  Lic ense
@@ -25280,7 +25280,7 @@ Z ero
  sc ans
 Oh io
  13 4
- � �
+ Î ´
  A post
  bet s
  emp owered
@@ -25356,7 +25356,7 @@ vey ard
  bar bar
  stri pes
  gall on
-� �
+ë 
  T rou
 H appy
  fulf illing
@@ -25374,7 +25374,7 @@ m oon
  McL aren
  abol ition
  ritual s
-� 다
+ ë¤
 c ip
  stock p
  id le
@@ -25539,7 +25539,7 @@ Af ric
  inflic ted
  Lie utenant
 desc rib
-� �
+× 
  energ ies
  promin ence
 w d
@@ -25552,7 +25552,7 @@ im ates
  LA F
  Gr ayson
 p ire
-c é
+c Ã©
  m udd
 ilib rium
  K arn
@@ -25595,7 +25595,7 @@ is ine
  sn iff
  pron ounce
  possess es
- п о
+ Ð¿ Ð¾
 ib li
  tri angle
 Mod ern
@@ -25709,7 +25709,7 @@ J am
  S entinel
 ne xt
  K re
-� �
+å 
  ch in
  N D
  not eworthy
@@ -25721,8 +25721,8 @@ upp et
 G i
  Antar ctica
 ay e
-� �
-� �
+· ¸
+ç 
  m ates
 W ild
  The ft
@@ -25745,7 +25745,7 @@ W ild
 met ric
  Ev olution
  tim ber
-� �
+ì  
  V IP
  Ch art
  Cal vin
@@ -25768,7 +25768,7 @@ So on
 f ont
  view point
 quest ion
-н а
+Ð½ Ð°
 J un
 H ot
  Loc ke
@@ -25869,7 +25869,7 @@ im on
  out p
  Bulgar ia
 b u
-� �
+È 
  pol es
  t ying
  Le ah
@@ -25903,7 +25903,7 @@ ire z
  thick ness
  D ion
  incorpor ating
-� �
+Ø ¯
  b ir
  text book
  tom atoes
@@ -26002,8 +26002,8 @@ Ass ociated
  pard on
  fair y
  iP od
-� �
-� �
+ã ¿
+å ¤
 ra il
  n g
 ass ic
@@ -26180,8 +26180,8 @@ ud ic
  det ract
  Mil iband
 w orm
-� �
-� �
+à ¹
+à ½
  H ers
  th irst
  ac re
@@ -26194,7 +26194,7 @@ by te
  c ries
  am use
  C ull
- � �
+ Ð ³
  rev ived
  separ ating
 fl oor
@@ -26219,7 +26219,7 @@ col ored
 13 5
  theat rical
 44 6
-в а
+Ð² Ð°
 h oles
  contrad iction
  C oca
@@ -26258,7 +26258,7 @@ cle ar
 aw ar
 T I
 art e
-� �
+é 
  S ally
  C age
  D ex
@@ -26337,10 +26337,10 @@ though t
  L one
  un used
 br ight
-� �
+ã 
  19 16
  Ab use
- � �
+ Ð ·
  t iles
  F usion
  Alex is
@@ -26397,13 +26397,13 @@ And re
 Lim ited
 ip es
 S qu
-� �
+ì§ 
  Ser bia
  Che f
 Flor ida
 ong o
  F E
-’ )
+â )
 K R
 l is
  May o
@@ -26447,8 +26447,8 @@ oj ure
 il ated
  be e
  Hispan ics
- d é
-� �
+ d Ã©
+ï¾ 
  T ools
  desc ript
 EM A
@@ -26467,7 +26467,7 @@ iv ision
  G omez
  fier y
 um ption
-… "
+â¦ "
 i ologist
 s pl
 . *
@@ -26475,7 +26475,7 @@ s pl
  real ism
  Air bnb
  l ongevity
-е л
+Ðµ Ð»
  w artime
 G ive
  h ust
@@ -26536,19 +26536,19 @@ inn amon
  intric ate
 C ase
  coh ort
- ████ █
+ ââââ â
  inf rared
 T it
  L if
 ink er
  Sub ject
-� �
+ë¡ 
  P yrrha
  cor on
 j in
 er os
 F X
-� �
+ä »
  B ike
  Cl aim
 ess ler
@@ -26583,8 +26583,8 @@ L INE
  n ort
  CB D
  sh un
-� �
-� �
+á¹ £
+Ï 
  Her z
 our age
  artic ulate
@@ -26623,7 +26623,7 @@ et ies
 he my
 oc ese
  stri ps
-� �
+â 
 osh op
  repl ica
  contain ment
@@ -26680,7 +26680,7 @@ f ake
 S chool
  C arn
  H ots
-� �
+Â ²
  bill ed
  Le go
  sw ung
@@ -26704,7 +26704,7 @@ just ice
  dep ressing
 uch i
  inex pl
-  ч
+  Ñ
  deb it
  transcript s
  Bur lington
@@ -26719,7 +26719,7 @@ reat h
  Weap ons
 rit ic
 form s
- m ás
+ m Ã¡s
 ph ot
  penn ed
  cour thouse
@@ -26795,7 +26795,7 @@ den ed
  tempt ation
 uck et
 Is aac
- “ …
+ â â¦
  discour aged
  Gate way
  monument al
@@ -26804,7 +26804,7 @@ Is aac
  Clay ton
 again st
  b oun
-.” [
+.â [
  gren ade
 m oving
  Leaders hip
@@ -26907,7 +26907,7 @@ t xt
  cur tain
  M ae
  advance ment
-í n
+Ã­ n
 Ph one
  B ali
  cheap est
@@ -26927,7 +26927,7 @@ rat ic
  tro ll
  bomb ard
  betray al
-� �
+Ï 
  Obama Care
 Orig inal
 t otal
@@ -27000,7 +27000,7 @@ R NA
  Guard iola
 umb o
 Palest inian
-ï ve
+Ã¯ ve
 P en
  J FK
  Hal ifax
@@ -27024,7 +27024,7 @@ GGGGG F
 m ong
  str icter
  LeeDr OiD
-� �
+ä ½
  w ired
  US L
  form ations
@@ -27138,7 +27138,7 @@ ou fl
  acqu itted
 erc ise
  familiar ity
- � �
+ ì 
  visual s
  D art
  Jul ius
@@ -27187,7 +27187,7 @@ re leased
  ruth less
  Rw anda
  ende av
-� �
+ã ³
  V iv
 est e
  seism ic
@@ -27270,7 +27270,7 @@ r ag
 r ists
  B av
  Sub st
-� �
+Å 
  patriot ism
  Wh is
 ? ]
@@ -27336,7 +27336,7 @@ ens ing
  b anners
 enn ial
  M ash
- � �
+ ì ´
 ank ed
 S HA
 itt on
@@ -27355,10 +27355,10 @@ ens ible
 ee ly
 op a
  Purd ue
-� н
+½ Ð½
 f ind
 pro ject
-� �
+Ñ 
 ib e
 id as
 b t
@@ -27429,7 +27429,7 @@ describ ed
  corro bor
 j on
  S ET
- █████ █
+ âââââ â
 h arm
  ex tingu
  p H
@@ -27474,7 +27474,7 @@ elect ric
  tor ped
  Stat us
  Spring field
-с я
+Ñ Ñ
  Fall on
  museum s
 t aker
@@ -27514,10 +27514,10 @@ sh oot
  reimb urse
  Max im
  Opt im
-� �
+å 
 R en
 OU LD
-н �
+Ð½ Ð
 oc re
  V ent
 S us
@@ -27564,7 +27564,7 @@ M iller
  reign ing
  add icts
  Rh ode
-� �
+á¹ 
 ess ential
 ret urn
  Dur ant
@@ -27574,7 +27574,7 @@ M om
 esc ope
  neglig ence
 [ ]
-� ��
+â 
  Cant or
  Ern st
  W itnesses
@@ -27589,13 +27589,13 @@ A X
  Bl vd
 oz y
  Fle et
-— “
+â â
 rim p
  ultras ound
  mosquit oes
  N T
 D D
- � �
+ â 
  S ays
  co y
 rou nder
@@ -27715,19 +27715,19 @@ Ar thur
 / ?
  stir ring
 12 2
-� �
+ï¼ 
 oper ation
  f aux
  recept or
 m ala
-р о
+Ñ Ð¾
  fisher men
  se greg
  B enson
  w ed
  decl ar
  At las
-� �
+× 
  safegu ards
 im ming
  Lind say
@@ -27827,7 +27827,7 @@ y ne
 ph al
 ind al
 W T
-) —
+) â
  G one
  D und
  cr ater
@@ -27853,7 +27853,7 @@ pr iced
  dev iation
  murder ing
  stick ers
-� �
+Ã 
  gl oom
  N gu
  N ato
@@ -27885,7 +27885,7 @@ az is
 OT O
  plun ge
  Cav s
-ッ プ
+ã ã
  eld est
  South ampton
  12 1
@@ -27905,13 +27905,13 @@ ig ating
 ig ator
  night mares
  Hamb urg
-� �
+æ ¥
 i ates
 l if
  subsc riber
 re rs
  par anoia
-� �
+ë 
 L and
 ic us
 ol in
@@ -27959,7 +27959,7 @@ men u
 Fr anc
  h ikes
  conf er
- � �
+ ë §
  toler ated
  15 5
 uzz le
@@ -27984,7 +27984,7 @@ t urned
  Dest iny
 Det ails
  fierce ly
-で は
+ã§ ã¯
  en semble
  25 9
  sail ors
@@ -28068,7 +28068,7 @@ bed room
  W aco
  rel ocated
  Hans on
-� �
+í 
  Pap ua
 atal ie
  occ ult
@@ -28106,7 +28106,7 @@ us at
 M il
  Cambod ia
 end e
-� �
+ë¥ ¼
 c ult
  Princ ip
  D il
@@ -28120,7 +28120,7 @@ ell ation
  s ank
  m ash
  Al leg
-� �
+ã ¤
  low s
  down right
  bar ring
@@ -28183,7 +28183,7 @@ il ion
 A w
 NAS DAQ
  T ong
-é l
+Ã© l
 __ _______________
  Buccane ers
  G ob
@@ -28211,7 +28211,7 @@ mar ried
  Fl owers
  bo iling
  sp icy
- � �
+ ì  
  Ex cel
 secut or
  Under standing
@@ -28264,7 +28264,7 @@ ul gar
  cl a
  datas et
 ( $
-� �
+ã ¬
  IS P
 L ord
  V ari
@@ -28323,7 +28323,7 @@ VER Y
 w olf
  sem ester
  Gr imm
-� �
+Ø ¹
 pl ays
  reg rets
  Bron x
@@ -28357,8 +28357,8 @@ Tor onto
  incarcer ated
  c raw
  glac iers
-� ￣
-￣ �
+£ ï¿£
+ï¿£ ï¿
 ys c
 Rad io
  numer ical
@@ -28371,7 +28371,7 @@ Comm un
  C U
 12 4
 Wed nesday
-� �
+Ñ 
  Notting ham
  tro phies
  obst ruct
@@ -28462,7 +28462,7 @@ Ch o
 in ner
  Herm ione
 v ind
-м и
+Ð¼ Ð¸
 ver ts
  makes hift
  Pat ricia
@@ -28531,10 +28531,10 @@ e enth
  quant itative
  Haw k
  ren ovation
-ç ão
+Ã§ Ã£o
  D uffy
  Brun o
-� �
+× ¨
  mush room
  B ard
  d ancers
@@ -28564,7 +28564,7 @@ Keen an
  inform s
  c alf
  equ ations
-� �
+ã 
  All an
 P aper
  bad ass
@@ -28591,7 +28591,7 @@ Bl oom
  ret ri
  delay ing
 h orse
-� �
+Î ²
  Lu cy
  Though ts
  19 0
@@ -28631,12 +28631,12 @@ tt ed
  Jin ping
 E dit
  compuls ory
-� �
+ÂÂ 
 M os
  st aunch
 f elt
  Thor nton
- Po incaré
+ Po incarÃ©
 h ah
  P AT
  resear ched
@@ -28672,7 +28672,7 @@ ugg ets
  Re ady
  amb ient
 ate red
-о� �
+Ð¾Ð ±
  M oving
 Just in
  ad apter
@@ -28723,7 +28723,7 @@ A uth
 ev o
  PTS D
 - "
-к а
+Ðº Ð°
 urd y
  S od
  F ut
@@ -28782,7 +28782,7 @@ im eters
  g or
  An ge
  Der by
- � �
+ ê °
  Men u
  Inf inite
  wh ist
@@ -28794,7 +28794,7 @@ quer que
  Serge i
  Y a
 h og
-� �
+Ï 
  T act
  share holder
  migr ate
@@ -28878,7 +28878,7 @@ erv atives
  sav age
  bat tered
  Far age
-,” \
+,â \
  tall er
  sp ikes
  scholars hips
@@ -28886,10 +28886,10 @@ erv atives
  borrow ers
  Cooper ation
  emb argo
- � �
+ × 
  wel comes
  sequ encing
-  �
+  ï¿½
  Andre as
  kind erg
 oper ative
@@ -29033,7 +29033,7 @@ ug a
 6 44
 og l
  un noticed
-) .”
+) .â
  Snap dragon
  les bians
  Tel escope
@@ -29090,7 +29090,7 @@ rehens ible
  short stop
  insurg ent
  ass ail
- p å
+ p Ã¥
  dispos able
  orb ital
  retrie ved
@@ -29150,7 +29150,7 @@ v acc
 employ ed
  champion ed
 An onymous
-� �
+Î »
  sh ack
 any a
  E SL
@@ -29191,7 +29191,7 @@ iff erence
  Hit chens
  Danger ous
  begin nings
-ン �
+ã³ ã
 Jose ph
  A U
 arm ac
@@ -29203,7 +29203,7 @@ ond uctor
  Est ablish
  un att
 ag ar
-é n
+Ã© n
 n um
  pne um
  medi ocre
@@ -29298,8 +29298,8 @@ p ush
  Aval anche
  Mag gie
  god dess
-  �
- � ��
+  æ
+ ð 
 ist ries
 B ase
  C J
@@ -29366,7 +29366,7 @@ ac ters
  dimin ishing
  stro kes
  North western
- � �
+ ð 
 abs olutely
  opio ids
  orchest ra
@@ -29450,7 +29450,7 @@ ha ired
  I PS
  bul bs
  Us ed
- � �
+ Ã ¢
  S IM
  Al cohol
  dead lines
@@ -29459,7 +29459,7 @@ St ock
  Develop ers
 ild a
  output s
-� �
+Î ·
  Tw isted
 G ary
  tag ged
@@ -29480,7 +29480,7 @@ Se lect
 j ac
  divers ion
  ecl ips
-“ .
+â .
  under mines
  Che ss
 etermin ation
@@ -29538,7 +29538,7 @@ arc raft
  rel iant
 tr aining
  L ara
-� �
+â 
  T owers
  f andom
 W olf
@@ -29553,7 +29553,7 @@ W olf
  Carl son
  square ly
  Anth rop
- � �
+ Î ±
  d izz
 bal anced
 ih adi
@@ -29651,7 +29651,7 @@ th ora
  s ocket
  be lls
  syn onymous
-� �
+Î ³
  High lights
  fuck ed
  Re ach
@@ -29665,7 +29665,7 @@ cor rect
  inhab ited
  intimid ated
  spray ed
-д а
+Ð´ Ð°
  Ab del
  D enny
  fru ition
@@ -29689,7 +29689,7 @@ Interest ingly
  traff ickers
  redes igned
  Rail road
-� �
+ã ¡
  crowd funding
 + ,
  confisc ated
@@ -29706,7 +29706,7 @@ pe ll
 es se
  Pre c
  bar becue
- � ��
+ ê ·¸
 ag us
  sc enery
 ship s
@@ -29723,13 +29723,13 @@ X T
 rop y
  L ite
  sp ree
-] ,”
+] ,â
 ors uch
  trans ist
  sh ave
  build ers
  bas in
-� �
+ã 
  compet ence
 res olution
 arc ity
@@ -29756,7 +29756,7 @@ par alle
  bes ie
  ven om
 Dav is
- � �
+ ë 
  Ly ft
  J ihad
 as ley
@@ -29829,7 +29829,7 @@ th ro
 ad min
 arch ive
 ole an
- � �
+ Ð µ
  Go al
  h ires
 in ition
@@ -29841,7 +29841,7 @@ in ition
  credit ors
  T rial
  Div ine
-  �
+  â
  tim et
 ores cent
  comm issions
@@ -29895,7 +29895,7 @@ pl ot
  O ECD
  premie red
 G EN
- ■■■ ■
+ â â â  â 
  s q
 v c
  Sky walker
@@ -29925,7 +29925,7 @@ sc ars
  Pl ains
 est ones
 A verage
-� �
+ã 
  par ach
  on wards
  def ends
@@ -29939,10 +29939,10 @@ man a
  rap es
  g ears
  Sl ate
- ( ‘
+ ( â
  sc anned
 ht aking
-� �
+Ã ´
  Bet ty
  Rel ief
  deb acle
@@ -29990,7 +29990,7 @@ AD E
 f if
  Ced ar
 pe lling
-� �
+Ñ 
  B uk
  frag ment
  E ri
@@ -30000,7 +30000,7 @@ ST ER
  cere bral
  nort heastern
  AP P
-о� �
+Ð¾Ð ½
 y y
  K O
  Ber lusconi
@@ -30018,7 +30018,7 @@ iv ik
  qu itting
  ple asing
 Al ready
-� �
+ã º
  pred atory
  dep iction
  L ength
@@ -30034,7 +30034,7 @@ met al
  sho vel
  sw earing
  ep igen
-� �
+ë ¦
 rec ated
  perpet rator
  Con cept
@@ -30051,12 +30051,12 @@ ident ial
 oll a
 ex istent
  Mand ela
-ل� �
+ÙÙ 
 res ult
  reun ited
  wh im
 Al an
-� �
+ä¸ 
 direct ed
  Serge y
  prox ies
@@ -30087,7 +30087,7 @@ Dig ital
  Ar d
  wh ichever
  f ixtures
-� �
+ 
  p oultry
  Riy adh
  sur geries
@@ -30125,7 +30125,7 @@ Read y
  disagree ments
  alien ated
  alter ing
-� �
+Ø ª
  Brew ery
  Low e
 19 93
@@ -30221,12 +30221,12 @@ b omb
 ous and
  a ux
  eth os
-.' ”
+.' â
  Arab ian
  unc ond
  comp iling
  deploy ments
- � �
+ Ã ¨
 ri ly
  Phot ography
  volunte ered
@@ -30302,7 +30302,7 @@ ass es
 od or
 od on
  p erenn
-� �
+ë 
  A very
  them ed
 oc amp
@@ -30330,7 +30330,7 @@ ipp ery
  19 32
 Ch annel
  j ava
-� �
+ì 
  may oral
 E nergy
  de eds
@@ -30416,7 +30416,7 @@ ran o
 __ _________________
 v ic
  M IC
-… )
+â¦ )
  Fr ag
 I U
 20 8
@@ -30587,7 +30587,7 @@ O ften
  adoles cent
 sign ificant
  Mater ials
-′ ,
+â² ,
 b old
 rod e
  li abilities
@@ -30610,7 +30610,7 @@ op lan
 b uy
  Pat reon
  incomp atible
-ä r
+Ã¤ r
  Ch loe
  mans laughter
 et ric
@@ -30628,7 +30628,7 @@ G al
  Hyder abad
 ut a
  tor ch
-� �
+â 
  J ade
 com ments
  import ing
@@ -30678,7 +30678,7 @@ AB LE
  C andy
  Song s
  So chi
- � �
+ ï¼ 
 Off icial
  Dest roy
  recount s
@@ -30687,7 +30687,7 @@ Off icial
 s igned
 s uccess
  C umm
-. 
+. Â
  worth less
  entrepreneur ial
  Arc ade
@@ -30703,7 +30703,7 @@ c ases
  hur ricanes
  jeopard y
  al le
-っ て
+ã£ ã¦
  sp heres
 av ian
  cryst all
@@ -30773,7 +30773,7 @@ IC ER
  spark ing
  enorm ously
  y o
-� �
+ë 
  upset ting
  reprodu ced
  y og
@@ -30945,7 +30945,7 @@ le l
 ut il
  f u
 : \
- na ïve
+ na Ã¯ve
  Mic hele
 bern atorial
  Bang alore
@@ -30966,13 +30966,13 @@ R oad
  che eks
  forward ed
  str ap
-� �
+â 
  ch ords
  A OL
  H imal
  Mur der
  fl ashed
-� �
+ì 
 f ruit
  script ed
  Guard ians
@@ -30982,8 +30982,8 @@ L ew
  mess enger
 hy dro
  Sk ull
-� �
-� �
+ë 
+ë 
  tor so
  Rand olph
 por ate
@@ -31016,7 +31016,7 @@ P olit
  Kin ect
  underest imate
  G on
- Fran ç
+ Fran Ã§
 disc rimination
  conqu ered
  Nort on
@@ -31025,7 +31025,7 @@ disc rimination
 Rom ney
  Ful ham
  White caps
-� �
+ã ¸
 ING S
  L ennon
  h i
@@ -31123,7 +31123,7 @@ cc oli
  un res
  Ess entially
 rest ed
- � �
+ Ù 
  Employ ees
 E ll
 C ertainly
@@ -31175,7 +31175,7 @@ v ae
  Pri ebus
  pl utonium
  dec is
-� �
+ã ½
  une arthed
 ast ered
 ins k
@@ -31206,7 +31206,7 @@ Not able
  Tr ading
 bre aks
  first hand
-� �
+ì 
  Rem ote
 IL LE
 rid ges
@@ -31297,7 +31297,7 @@ N azis
  Frankf urt
 se ed
  b art
-イ �
+ã¤ ã
 V O
 __ ___________________
 ield ing
@@ -31318,7 +31318,7 @@ ield ing
  custom ization
  cop ing
  deter rent
-� �
+ã 
  H ip
  soft ly
  w oo
@@ -31332,7 +31332,7 @@ y ards
  Reg ulation
  laun cher
  condition ed
- � �
+ ì 
 Sp ot
  t aped
  out bur
@@ -31390,7 +31390,7 @@ v ari
  Se al
  Br ut
 ra pper
-т и
+Ñ Ð¸
  B j
 ar ro
 com puter
@@ -31423,7 +31423,7 @@ L o
 D s
 M W
  L T
-� �
+è ¨
  R X
  br ide
  diff ered
@@ -31445,8 +31445,8 @@ r andom
 O range
  partner ing
  prefer able
- � �
- � �
+ Ã 
+ ì 
  H idden
  Bern stein
 Y ellow
@@ -31491,7 +31491,7 @@ b ara
  complement ary
  fig ur
  disp ersed
-� �
+äº º
 Ad v
 B ot
 13 1
@@ -31509,7 +31509,7 @@ f usc
  sub reddit
  un affected
  amass ed
-� �
+ã ·
  alt ar
  n at
 aw atts
@@ -31589,7 +31589,7 @@ ret ch
 L ay
 BI L
 gal itarian
-/ £
+/ Â£
  Gr ill
 am ins
 igh am
@@ -31624,7 +31624,7 @@ is ly
  Jur assic
  ove rest
 ull ing
-i ć
+i Ä
  prim er
  pr istine
  visc eral
@@ -31706,8 +31706,8 @@ supp orted
  nan ot
  st umbling
  encl osure
- � �
-?’ ”
+ Ï 
+?â â
  J ungle
  privat ization
 p ast
