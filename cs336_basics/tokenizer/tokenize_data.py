@@ -1,7 +1,7 @@
 import numpy as np
 from multiprocessing import Pool, cpu_count
 from tqdm import tqdm
-from cs336_basics.tokenizer.tokenizer_fast import BPETokenizer
+from cs336_basics.tokenizer.tokenizer import BPETokenizer
 
 _bpe = None
 

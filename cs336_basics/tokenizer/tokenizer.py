@@ -37,35 +37,70 @@ class BPETokenizer:
             self.vocab = {i: bytes([i]) for i in range(256)}
             for tok in self.special_tokens:
                 self.vocab[len(self.vocab)] = tok.encode("utf-8")
-
+        self._bytes_to_id = {v: k for k, v in self.vocab.items()}
+        self._encode_cache = {}
+        self._merge_order = {}
+        for i, (a, b) in enumerate(self.merges):
+            pair = (self._bytes_to_id[a], self._bytes_to_id[b])
+            if pair not in self._merge_order:
+                self._merge_order[pair] = i
+    
     @classmethod
     def from_files(cls, vocab_filepath, merges_filepath, special_tokens=None):
         with open(vocab_filepath, "r") as f:
             vocab = json.load(f)
+            vocab = {int(k): v.encode("latin-1") for k, v in vocab.items()}
         with open(merges_filepath, "r") as f:
             merges = f.readlines()
-        return cls(vocab=vocab, merges=merges, special_tokens=special_tokens)
+            final_merges = []
+            for line in merges:
+                line = line.strip('\n')
+                if line.strip():
+                    if line[0] == ' ':
+                        rest = line[1:]
+                        parts = rest.split(' ', 1)
+                        a, b = ' ' + parts[0], parts[1] if len(parts) > 1 else '\n'
+                    else:
+                        a, b = line.split(' ', 1)
+                    final_merges.append((a.encode('latin-1'), b.encode('latin-1')))
+        return cls(vocab=vocab, merges=final_merges, special_tokens=special_tokens)
 
     def encode(self, text):
-        bytes_to_id = {v: k for k, v in self.vocab.items()}
         res = []
         sorted_toks = sorted(self.special_tokens, key=len, reverse=True)
         pattern = "(" + "|".join(re.escape(tok) for tok in sorted_toks) + ")"
         parts = re.split(pattern, text)  if self.special_tokens else [text]
         for part in parts:
             if part in self.special_tokens:
-                res.append(bytes_to_id[part.encode('utf-8')])
+                res.append(self._bytes_to_id[part.encode('utf-8')])
                 continue
             for pretoken in re.findall(PAT, part):
-                token_ids = [bytes_to_id[bytes([b])] for b in pretoken.encode('utf-8')]
-                for pair in self.merges:
-                    merged_id = bytes_to_id[pair[0] + pair[1]]
-                    i = 0
-                    while i < len(token_ids) - 1:
-                        if (self.vocab[token_ids[i]], self.vocab[token_ids[i+1]]) == pair:
-                            token_ids[i:i+2] = [merged_id]
-                        else:
-                            i += 1
+                if pretoken in self._encode_cache:
+                    res.extend(self._encode_cache[pretoken])
+                    continue
+                token_ids = [self._bytes_to_id[bytes([b])] for b in pretoken.encode('utf-8')]
+                while len(token_ids) > 1:
+                    priority_merge = None
+                    best_rank = float('inf')
+                    for i in range(len(token_ids) - 1):
+                        rank = self._merge_order.get((token_ids[i], token_ids[i+1]))
+                        if rank is not None and rank < best_rank:
+                            priority_merge = i
+                            best_rank = rank
+                    if priority_merge is None:
+                        break
+                    pair = (token_ids[priority_merge], token_ids[priority_merge+1])
+                    merged_id = self._bytes_to_id[self.vocab[pair[0]] + self.vocab[pair[1]]]
+                    token_ids[priority_merge:priority_merge+2] = [merged_id]
+                # for pair in self.merges:
+                #     merged_id = self.bytes_to_id[pair[0] + pair[1]]
+                #     i = 0
+                #     while i < len(token_ids) - 1:
+                #         if (self.vocab[token_ids[i]], self.vocab[token_ids[i+1]]) == pair:
+                #             token_ids[i:i+2] = [merged_id]
+                #         else:
+                #             i += 1
+                self._encode_cache[pretoken] = token_ids
                 res.extend(token_ids)
         return res
 
@@ -203,14 +238,11 @@ class BPETokenizer:
         self.merges = [(id_to_bytes[a], id_to_bytes[b]) for a, b in merged_pairs]
 
 def save(bpe, vocab_path="vocab.json", merges_path="merges.txt"):
-    # vocab: {token_id: string with escaped non-utf8 bytes}
     with open(vocab_path, "w", encoding="utf-8") as f:
-        json.dump({k: v.decode("utf-8", errors="replace") for k, v in bpe.vocab.items()}, f, indent=2, ensure_ascii=False)
-
-    # merges: one pair per line as readable strings
+        json.dump({k: v.decode("latin-1") for k, v in bpe.vocab.items()}, f, indent=2, ensure_ascii=False)
     with open(merges_path, "w", encoding="utf-8") as f:
         for a, b in bpe.merges:
-            f.write(f"{a.decode('utf-8', errors='replace')} {b.decode('utf-8', errors='replace')}\n")
+            f.write(f"{a.decode('latin-1')} {b.decode('latin-1')}\n")
 
 if __name__ == "__main__":
 
