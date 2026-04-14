@@ -50,13 +50,13 @@ class MultiheadAttention(nn.Module):
 
         if self.rope is not None:
             if token_positions is None:
-                token_positions = torch.arange(x.shape[-2])
+                token_positions = torch.arange(x.shape[-2], device=x.device)
             q = self.rope(q, token_positions)
             k = self.rope(k, token_positions)
 
         
         seq_len = x.shape[-2] # " ... sequence_length d_in"
-        mask = torch.triu(torch.ones(seq_len, seq_len), diagonal=1).bool()
+        mask = torch.triu(torch.ones(seq_len, seq_len, device=x.device), diagonal=1).bool()
         mask = mask == False
         
         # weights_o: (d_model, num_heads, d_k) → 'mhk'

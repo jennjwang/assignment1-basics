@@ -27,10 +27,11 @@ from pathlib import Path
 wandb_secret = modal.Secret.from_name("wandb")
 
 @app.function(
-    image=build_image(), 
-    gpu="H100",
+    image=build_image(),
+    gpu="B200",
     volumes=VOLUME_MOUNTS,
-    secrets=[wandb_secret]
+    secrets=[wandb_secret],
+    timeout=60 * 60 * 3,
 )
 def train_loop(params: dict):
     batch_size = params["batch_size"]
@@ -50,6 +51,8 @@ def train_loop(params: dict):
 
     model.to(device)
 
+    model = torch.compile(model)
+
     max_learning_rate = params["max_learning_rate"]
     min_learning_rate = params["min_learning_rate"]
     warmup_iters = params["warmup_iters"]
@@ -66,7 +69,7 @@ def train_loop(params: dict):
                     betas=params["betas"], 
                     eps=params["eps"])
 
-    wandb.init(project="cs336_basics", config=params)
+    wandb.init(project="cs336_basics", config=params, name=params["experiment_name"], reinit=True)
 
     model.train()
     start_time = time.time()
@@ -102,16 +105,18 @@ def train_loop(params: dict):
                 labels = rearrange(labels, "batch_size context_len -> (batch_size context_len)")
 
                 val_loss = cross_entropy_loss(logits, labels)
+                torch.cuda.synchronize()
                 print(f"Iteration {iteration}, Loss: {loss.item()}, Learning Rate: {learning_rate}, Validation Loss: {val_loss.item()}")
                 wandb.log({"train_loss": loss.item(), "val_loss": val_loss.item(), "lr": learning_rate, "time": time.time() - start_time}, step=iteration)
             model.train()
+    return val_loss.item()
 
-@app.local_entrypoint()
-def main():
-    with open("cs336_basics/training/params.json") as f:
-        params = json.load(f)
-    (Path(params["checkpoint_path"]).parent).mkdir(parents=True, exist_ok=True)
-    train_loop.remote(params)
+# @app.local_entrypoint()
+# def main():
+#     with open("cs336_basics/training/params.json") as f:
+#         params = json.load(f)
+#     (Path(params["checkpoint_path"]).parent).mkdir(parents=True, exist_ok=True)
+#     train_loop.remote(params)
 
-if __name__ == "__main__":
-    main()
+# if __name__ == "__main__":
+#     main()

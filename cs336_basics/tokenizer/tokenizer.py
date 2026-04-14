@@ -123,7 +123,8 @@ class BPETokenizer:
         with Pool(num_processes) as p:
             results = list(tqdm(
                 p.imap(_split_and_pretokenize, [(chunk, self.special_tokens) for chunk in tasks]),
-                total=len(tasks), desc="Pretokenizing"
+                total=len(tasks),
+                desc="Pretokenizing"
             ))
 
         merged = Counter()
