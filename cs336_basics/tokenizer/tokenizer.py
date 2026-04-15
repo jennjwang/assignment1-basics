@@ -9,6 +9,9 @@ import heapq
 import array
 from cs336_basics.tokenizer.pretokenization_example import find_chunk_boundaries
 from multiprocessing import Pool, cpu_count
+import psutil
+import pstats
+import time
 
 
 PAT = r"""'(?:[sdmt]|ll|ve|re)| ?\p{L}+| ?\p{N}+| ?[^\s\p{L}\p{N}]+|\s+(?!\S)|\s+"""
@@ -283,6 +286,9 @@ def save(bpe, vocab_path="vocab.json", merges_path="merges.txt"):
 
 if __name__ == "__main__":
 
+    process = psutil.Process()
+    start = time.time()
+
     with Profile() as profile:
         special_tokens = ['<|endoftext|>']
         input_path = 'data/raw_data/owt_train.txt'
@@ -291,39 +297,76 @@ if __name__ == "__main__":
         bpe = BPETokenizer(input_path=input_path, vocab_size=vocab_size, special_tokens=special_tokens)
         bpe.train()
         # save(bpe, vocab_path="data/vocab.json", merges_path="data/merges.txt")
-    
-    import pstats
+
+    end = time.time()
+    current = process.memory_info().rss
 
     stats = pstats.Stats(profile)
     stats.strip_dirs().sort_stats("cumulative").print_stats(20)
-    stats.dump_stats("data/profile.out")
+    # stats.dump_stats("data/profile.out")
 
+    print(f"Time taken: {end - start} seconds")
+    print(f"Memory taken: {current / 1024 / 1024} MB")
 '''
-4619906 function calls (4619188 primitive calls) in 23.278 seconds
+4832266 function calls (4831925 primitive calls) in 28.707 seconds
 
    Ordered by: cumulative time
-   List reduced from 503 to 20 due to restriction <20>
+   List reduced from 491 to 20 due to restriction <20>
 
    ncalls  tottime  percall  cumtime  percall filename:lineno(function)
-       76    0.002    0.000   20.927    0.275 pool.py:500(_wait_for_updates)
-  262/258    0.002    0.000   19.789    0.077 connection.py:390(_recv)
-  518/514    2.395    0.005   19.786    0.038 {built-in method posix.read}
-      155    0.008    0.000   19.713    0.127 connection.py:1122(wait)
-      6/5    0.028    0.005   15.391    3.078 threading.py:637(wait)
-      2/1    1.131    0.565   15.357   15.357 tokenizer.py:191(train)
-      2/1    2.265    1.133   13.009   13.009 tokenizer.py:126(_pretokenize_chunks)
-      129    0.003    0.000   12.553    0.097 connection.py:246(recv)
-      129    0.000    0.000   12.424    0.096 util.py:208(__call__)
-        1    0.000    0.000   12.422   12.422 pool.py:738(__exit__)
-        1    0.000    0.000   12.422   12.422 pool.py:654(terminate)
-        1    0.001    0.001   12.422   12.422 pool.py:680(_terminate_pool)
-        1    0.001    0.001   12.210   12.210 pool.py:671(_help_stuff_finish)
-       57    0.078    0.001   12.209    0.214 {method 'acquire' of '_multiprocessing.SemLock' objects}
-  131/129    0.001    0.000   12.181    0.094 connection.py:429(_recv_bytes)
-      3/1    0.001    0.000   12.130   12.130 threading.py:1001(run)
-        1    0.000    0.000   12.130   12.130 pool.py:573(_handle_results)
-        1    0.001    0.001   12.128   12.128 pool.py:527(_handle_tasks)
-      261    5.537    0.021    5.537    0.021 {method 'dump' of '_pickle.Pickler' objects}
-        1    0.000    0.000    5.310    5.310 pool.py:305(_repopulate_pool)
+      171    0.010    0.000   20.843    0.122 pool.py:500(_wait_for_updates)
+      345    0.013    0.000   20.510    0.059 connection.py:1122(wait)
+      6/5    0.060    0.010   18.046    3.609 threading.py:637(wait)
+      2/1    1.178    0.589   17.968   17.968 tokenizer.py:194(train)
+  262/258    0.003    0.000   17.292    0.067 connection.py:390(_recv)
+  518/514    2.572    0.005   17.289    0.034 {built-in method posix.read}
+      2/1    1.613    0.807   14.966   14.966 tokenizer.py:129(_pretokenize_chunks)
+      129    0.003    0.000   14.760    0.114 connection.py:246(recv)
+      129    0.000    0.000   14.385    0.112 util.py:208(__call__)
+        1    0.000    0.000   14.384   14.384 pool.py:738(__exit__)
+        1    0.000    0.000   14.384   14.384 pool.py:654(terminate)
+        1    0.000    0.000   14.383   14.383 pool.py:680(_terminate_pool)
+  131/129    0.003    0.000   14.312    0.111 connection.py:429(_recv_bytes)
+        1    0.000    0.000   14.236   14.236 pool.py:671(_help_stuff_finish)
+       59    0.266    0.005   14.235    0.241 {method 'acquire' of '_multiprocessing.SemLock' objects}
+      3/1    0.001    0.000   13.969   13.969 threading.py:1001(run)
+        1    0.000    0.000   13.969   13.969 pool.py:573(_handle_results)
+        1    0.000    0.000   13.965   13.965 pool.py:527(_handle_tasks)
+        1    0.000    0.000    9.058    9.058 pool.py:305(_repopulate_pool)
+        1    0.006    0.006    9.058    9.058 pool.py:314(_repopulate_pool_static)
 
+
+Time taken: 28.707510948181152 seconds
+Memory taken: 212.7734375 MB
+
+405458470 function calls (405457970 primitive calls) in 456.159 seconds
+
+   Ordered by: cumulative time
+   List reduced from 491 to 20 due to restriction <20>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+    46/45    0.564    0.012  819.366   18.208 threading.py:637(wait)
+   110/38   11.663    0.106  384.401   10.116 threading.py:323(wait)
+    31743  127.876    0.004  181.696    0.006 tokenizer.py:148(_merge)
+      704    0.006    0.000  153.963    0.219 pool.py:500(_wait_for_updates)
+      256    1.503    0.006  114.723    0.448 connection.py:202(send)
+  513/150   81.627    0.159  106.333    0.709 {method 'acquire' of '_thread.lock' objects}
+      261    0.004    0.000   96.358    0.369 connection.py:406(_send_bytes)
+      389    0.983    0.003   96.327    0.248 connection.py:381(_send)
+      389   19.206    0.049   95.344    0.245 {built-in method posix.write}
+      129    0.000    0.000   77.774    0.603 util.py:208(__call__)
+        1    0.000    0.000   77.773   77.773 pool.py:738(__exit__)
+        1    0.000    0.000   77.773   77.773 pool.py:654(terminate)
+        1    0.002    0.002   77.772   77.772 pool.py:680(_terminate_pool)
+     1068    0.369    0.000   76.489    0.072 {method 'acquire' of '_multiprocessing.SemLock' objects}
+        1    0.004    0.004   76.479   76.479 pool.py:671(_help_stuff_finish)
+      3/1    0.000    0.000   76.116   76.116 threading.py:1001(run)
+        1    0.000    0.000   76.116   76.116 pool.py:527(_handle_tasks)
+        1    0.000    0.000   76.109   76.109 pool.py:573(_handle_results)
+     1411    0.047    0.000   63.876    0.045 connection.py:1122(wait)
+    90240    0.077    0.000   41.088    0.000 process.py:224(exitcode)
+
+
+Time taken: 456.1594407558441 seconds
+Memory taken: 5676.8203125 MB
 '''
