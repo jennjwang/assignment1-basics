@@ -24,6 +24,18 @@ class TransformerBlock(nn.Module):
         normed_attention = self.ffn_norm(attention_output)
         return attention_output + self.ffn(normed_attention)
 
+        # # layer_norm_ablation
+        # attention_output = x + self.attention(x, token_positions)
+        # ffn_output = self.ffn(attention_output)
+        # res = attention_output + ffn_output
+        # return res
+        
+        # pre_norm_ablation
+        # attention_output = x + self.attention(x, token_positions)
+        # normed_x = self.attention_norm(attention_output)
+        # attention_output = normed_x + self.ffn(normed_x)
+        # return self.ffn_norm(attention_output)
+
 class Transformer(nn.Module):
     def __init__(self, vocab_size, context_length, d_model, num_layers, num_heads, d_ff, rope_theta=None):
         super().__init__()

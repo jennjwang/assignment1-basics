@@ -20,7 +20,7 @@ def decode(model, tokenizer, inputs, max_tokens, temperature=None, threshold=Non
         if temperature is not None:
             logits = logits / temperature
         
-        probs = softmax(logits)
+        probs = softmax(logits, dim=-1)
 
         # top-p sampling
         if threshold is not None:

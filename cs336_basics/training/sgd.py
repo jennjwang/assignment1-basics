@@ -24,13 +24,15 @@ class SGD(torch.optim.Optimizer):
                 state["t"] = t + 1  # Increment iteration number.
         return loss
 
-# TODO: tune learning rate
+lr_values = [1e1, 1e2, 1e3]
 
-weights = torch.nn.Parameter(5 * torch.randn((10, 10)))
-opt = SGD(weights, lr=1)
-for t in range(10):
-    opt.zero_grad()  # Reset the gradients for all learnable parameters.
-    loss = (weights**2).mean()  # Compute a scalar loss value.
-    print(loss.cpu().item())
-    loss.backward()  # Run backward pass, which computes gradients.
-    opt.step()
+for lr in lr_values:
+    weights = torch.nn.Parameter(5 * torch.randn((10, 10)))
+    opt = SGD([weights], lr=lr)
+    print('lr: ', lr)
+    for t in range(10):
+        opt.zero_grad()  # Reset the gradients for all learnable parameters.
+        loss = (weights**2).mean()  # Compute a scalar loss value.
+        print(loss.cpu().item())
+        loss.backward()  # Run backward pass, which computes gradients.
+        opt.step()

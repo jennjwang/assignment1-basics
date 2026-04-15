@@ -14,10 +14,13 @@ def softmax(x, dim):
 
 def scaled_dot_product_attention(Q, K, V, mask=None):
     nom = einsum(Q, K, '... i d, ... j d -> ... i j')
+    # print("nom", nom)
     dem = math.sqrt(K.shape[-1])
     scores = nom/dem
+    # print("scores before mask", scores)
     if mask is not None:
-        scores = (scores).masked_fill(mask == False, float('-inf'))
+        scores = scores + mask
+        # print("scores after mask", scores)
     weights = softmax(scores, dim=-1)
     res = einsum(weights, V, '... i j, ... j v -> ... i v')
     return res
@@ -56,8 +59,7 @@ class MultiheadAttention(nn.Module):
 
         
         seq_len = x.shape[-2] # " ... sequence_length d_in"
-        mask = torch.triu(torch.ones(seq_len, seq_len, device=x.device), diagonal=1).bool()
-        mask = mask == False
+        mask = torch.triu(torch.full((seq_len, seq_len), float('-inf'), device=x.device), diagonal=1)
         
         # weights_o: (d_model, num_heads, d_k) → 'mhk'
         # attention:   (num_heads, batch, seq, d_k)    → 'h..bsk'

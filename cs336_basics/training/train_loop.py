@@ -25,13 +25,14 @@ from einops import rearrange
 from pathlib import Path
 
 wandb_secret = modal.Secret.from_name("wandb")
+torch.set_float32_matmul_precision('high')
 
 @app.function(
     image=build_image(),
     gpu="B200",
     volumes=VOLUME_MOUNTS,
     secrets=[wandb_secret],
-    timeout=60 * 60 * 3,
+    timeout=60 * 60 * 8,
 )
 def train_loop(params: dict):
     batch_size = params["batch_size"]
@@ -50,7 +51,7 @@ def train_loop(params: dict):
                         rope_theta=params["rope_theta"])
 
     model.to(device)
-
+    uncompiled_model = model
     model = torch.compile(model)
 
     max_learning_rate = params["max_learning_rate"]
@@ -61,7 +62,7 @@ def train_loop(params: dict):
     save_interval = params["save_interval"]
     log_interval = params["log_interval"]
     num_iters = params["num_iters"]
-    learning_rate = learning_rate_schedule(0, max_learning_rate, min_learning_rate, warmup_iters, cosine_cycle_iters)
+    learning_rate = params['learning_rate']
 
     optimizer = AdamW(model.parameters(), 
                     lr=learning_rate, 
@@ -73,6 +74,13 @@ def train_loop(params: dict):
 
     model.train()
     start_time = time.time()
+
+    # save params to file
+    params_path = Path(params["checkpoint_path"]).parent / "hyperparameters" / f"{params['experiment_name']}.json"
+    params_path.parent.mkdir(parents=True, exist_ok=True)
+    json.dump(params, open(params_path, "w"))
+
+    val_losses = []
 
     for iteration in range(num_iters):
         learning_rate = learning_rate_schedule(
@@ -86,6 +94,10 @@ def train_loop(params: dict):
         labels = rearrange(labels, "batch_size context_len -> (batch_size context_len)")
 
         loss = cross_entropy_loss(logits, labels)
+
+        # torch.cuda.synchronize()
+        # print(f"Iteration {iteration}, Loss: {loss.item()}, Learning Rate: {learning_rate}")
+        # wandb.log({"train_loss": loss.item(), "lr": learning_rate, "time": time.time() - start_time}, step=iteration)
         
         optimizer.zero_grad()
         loss.backward()
@@ -93,7 +105,9 @@ def train_loop(params: dict):
         optimizer.step()
 
         if iteration % save_interval == 0:
-            save_checkpoint(model, optimizer, iteration, params["checkpoint_path"])
+            checkpoint_path = Path(params["checkpoint_path"]) / f"{params['experiment_name']}_{iteration}.pt"
+            checkpoint_path.parent.mkdir(parents=True, exist_ok=True)
+            save_checkpoint(uncompiled_model, optimizer, iteration, checkpoint_path)
 
         if iteration % log_interval == 0:
             with torch.no_grad():
@@ -106,17 +120,22 @@ def train_loop(params: dict):
 
                 val_loss = cross_entropy_loss(logits, labels)
                 torch.cuda.synchronize()
-                print(f"Iteration {iteration}, Loss: {loss.item()}, Learning Rate: {learning_rate}, Validation Loss: {val_loss.item()}")
+                print(f"Iteration {iteration}, Training Loss: {loss.item()}, Validation Loss: {val_loss.item()}, Learning Rate: {learning_rate}")
                 wandb.log({"train_loss": loss.item(), "val_loss": val_loss.item(), "lr": learning_rate, "time": time.time() - start_time}, step=iteration)
-            model.train()
-    return val_loss.item()
 
-# @app.local_entrypoint()
-# def main():
-#     with open("cs336_basics/training/params.json") as f:
-#         params = json.load(f)
-#     (Path(params["checkpoint_path"]).parent).mkdir(parents=True, exist_ok=True)
-#     train_loop.remote(params)
+                if iteration >= cosine_cycle_iters:
+                    val_losses.append(val_loss.item())
+
+            model.train()
+    
+    return sum(val_losses) / len(val_losses)
+
+@app.local_entrypoint()
+def main():
+    with open("cs336_basics/training/params.json") as f:
+        params = json.load(f)
+    params["experiment_name"] = f"baseline"
+    train_loop.remote(params)
 
 # if __name__ == "__main__":
 #     main()
