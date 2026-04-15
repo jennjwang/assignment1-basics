@@ -19,7 +19,10 @@ def scaled_dot_product_attention(Q, K, V, mask=None):
     scores = nom/dem
     # print("scores before mask", scores)
     if mask is not None:
-        scores = scores + mask
+        if mask.dtype == torch.bool:
+            scores = (scores).masked_fill(mask == False, float('-inf'))
+        else:
+            scores = scores + mask
         # print("scores after mask", scores)
     weights = softmax(scores, dim=-1)
     res = einsum(weights, V, '... i j, ... j v -> ... i v')

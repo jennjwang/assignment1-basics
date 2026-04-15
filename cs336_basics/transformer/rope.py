@@ -22,8 +22,8 @@ class RoPE(nn.Module):
         cos_c = self.cos_tensor[token_positions]
         sin_c = self.sin_tensor[token_positions]
 
-        cos_c = rearrange(cos_c, '... i d -> ... 1 1 i d')
-        sin_c = rearrange(sin_c, '... i d -> ... 1 1 i d')
+        cos_c = rearrange(cos_c, '... i d -> ... 1 i d')
+        sin_c = rearrange(sin_c, '... i d -> ... 1 i d')
         rotated_x1 = cos_c * x1 - sin_c * x2
         rotated_x2 = sin_c * x1 + cos_c * x2
 
