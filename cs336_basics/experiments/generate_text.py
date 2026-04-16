@@ -43,16 +43,20 @@ def generate_text(src, inputs, params, temperature=None, threshold=None, max_tok
 
 @app.local_entrypoint()
 def main_generate_text():
-    src = "/root/data/checkpoints/baseline_9000.pt"
-    temperature = 0.99
-    threshold = 0.1
+    src = "/root/data/checkpoints/owt_9000.pt"
+    merges_path = "/root/data/owt_merges.txt"
+    input_path = "/root/data/owt_vocab.json"
+    temperature = 0.9
+    threshold = 0.9
     max_tokens = 256
-    merges_path = "/root/data/TinyStories_merges.txt"
-    input_path = "/root/data/TinyStories_vocab.json"
+    # src = "/root/data/checkpoints/baseline_9000.pt"
+    # merges_path = "/root/data/TinyStories_merges.txt"
+    # input_path = "/root/data/TinyStories_vocab.json"
     special_tokens = ["<|endoftext|>"]
     inputs = "Once upon a time,"
     print("threshold: ", threshold, "temperature: ", temperature)
     with open("cs336_basics/training/params.json") as f:
         params = json.load(f)
+        # params['vocab_size'] = 10000
     res = generate_text.remote(src, inputs, params, temperature, threshold, max_tokens, merges_path, input_path, special_tokens)
     print(res)

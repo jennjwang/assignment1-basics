@@ -7,7 +7,7 @@ from cs336_basics.experiments.lr_tuning import run_lr_tuning
 
 def run_batch_size_tuning(params: dict):
 
-    batch_size_value = 16
+    batch_size_value = 512
     best_batch_size = None
     best_val_loss = float('inf')
 
@@ -17,6 +17,7 @@ def run_batch_size_tuning(params: dict):
             params_copy["num_iters"] = 327680000 // batch_size_value // params_copy["context_length"]
             params_copy["batch_size"] = batch_size_value
             params_copy["experiment_name"] = f"batch_size_tuning_{batch_size_value}_{time.time()}"
+            params_copy['cosine_cycle_iters'] = params_copy["num_iters"] - 500
             # val_loss = train_loop.remote(params_copy)
 
             lr, val_loss = run_lr_tuning(params_copy)

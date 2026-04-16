@@ -8,8 +8,8 @@ import math
 def run_lr_tuning(params: dict):
 
     rounds = 4
-    lr_low = 1e-4
-    lr_high = 1e-1
+    lr_low = 1e-5
+    lr_high = 1e-2
 
     while rounds > 0:
 

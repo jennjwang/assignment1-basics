@@ -32,7 +32,7 @@ torch.set_float32_matmul_precision('high')
     gpu="B200",
     volumes=VOLUME_MOUNTS,
     secrets=[wandb_secret],
-    timeout=60 * 60 * 8,
+    timeout=60 * 45,
 )
 def train_loop(params: dict):
     batch_size = params["batch_size"]
@@ -134,7 +134,7 @@ def train_loop(params: dict):
 def main():
     with open("cs336_basics/training/params.json") as f:
         params = json.load(f)
-    params["experiment_name"] = f"baseline"
+    params["experiment_name"] = f"owt_reproduce"
     train_loop.remote(params)
 
 # if __name__ == "__main__":

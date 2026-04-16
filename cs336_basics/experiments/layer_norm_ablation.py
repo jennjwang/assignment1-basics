@@ -14,9 +14,9 @@ def layer_norm_ablation():
     with open("cs336_basics/training/params.json") as f:
         params = json.load(f)
     params["experiment_name"] = f"layer_norm_ablation"
-    train_loop.remote(params)
+    # train_loop.remote(params)
 
-    # run_lr_tuning(params)
+    run_lr_tuning(params)
 
 # if __name__ == "__main__":
 #     main()

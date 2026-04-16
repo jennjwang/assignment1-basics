@@ -30,7 +30,7 @@ class TransformerBlock(nn.Module):
         # res = attention_output + ffn_output
         # return res
         
-        # pre_norm_ablation
+        # # pre_norm_ablation
         # attention_output = x + self.attention(x, token_positions)
         # normed_x = self.attention_norm(attention_output)
         # attention_output = normed_x + self.ffn(normed_x)

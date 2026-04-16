@@ -24,7 +24,6 @@ class PositionwiseFeedForward(nn.Module):
         w2_x = einsum('h i, ...i -> ...h', self.weights_2, product)
         return w2_x
     
-    # silu
     # def forward(self, x):
     #     w1_x = einsum('h i, ...i -> ...h', self.weights_1, x)
     #     silu =  w1_x * sigmoid(w1_x)

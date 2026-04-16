@@ -13,7 +13,9 @@ specified threshold value.
 """
 
 def decode(model, tokenizer, inputs, max_tokens, temperature=None, threshold=None):
+    res = inputs
     for i in range(max_tokens):
+        inputs = res[:, -model.context_length:]
         logits = model(inputs)[:, -1, :]
 
         # temperature
@@ -37,5 +39,5 @@ def decode(model, tokenizer, inputs, max_tokens, temperature=None, threshold=Non
         if tokenizer.decode(token.flatten().tolist()) == "<|endoftext|>":
             break
 
-        inputs = torch.cat([inputs, token], dim=1)
-    return inputs
+        res = torch.cat([res, token], dim=1)
+    return res
